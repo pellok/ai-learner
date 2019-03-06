@@ -6,9 +6,15 @@
 
 投影片 PDF:[投影片PDF下載連結](https://drive.google.com/file/d/1Tn_swvB0JxeIDhyrJmbZdwvNsV8_-Rga/view)
 
+[part4\_Function](https://www.youtube.com/watch?v=h9EgCu0FusA) 
 
+Syntax, Define, Call Function, Repetition, Return Statement, Multiple return values, 
 
-[part4\_Function](https://www.youtube.com/watch?v=h9EgCu0FusA) Syntax
+Anonymous Function - Lambda
+
+Map Function
+
+Global, Local variables
 
 
 
