@@ -1,7 +1,5 @@
 # Python 資料處理及探索分析
 
-
-
 ### 安裝
 
 #### ipython
@@ -19,17 +17,17 @@ jupyter notebook
 http://localhost:8888/tree#notebooks
 ```
 
-
-
 #### [AI人工智慧學校-Hub](https://hub.tpe.aiacademy.tw/user/at081149/lab?redirects=1)
 
 jupyter lab mode and tree mode 切換
 
-https://hub.tpe.aiacademy.tw/user/at081149/lab?redirects=1
+[https://hub.tpe.aiacademy.tw/user/at081149/lab?redirects=1](https://hub.tpe.aiacademy.tw/user/at081149/lab?redirects=1)
 
-https://hub.tpe.aiacademy.tw/user/at081149/tree?redirects=1
+[https://hub.tpe.aiacademy.tw/user/at081149/tree?redirects=1](https://hub.tpe.aiacademy.tw/user/at081149/tree?redirects=1)
 
 
+
+#### [jupyter 教學](https://docs.google.com/presentation/d/1rBOmUrPdYcal24EOw7FV6dVQohDDwLDeKxE9RiXK6lY/edit#slide=id.g39aba76690_0_20)
 
 
 
