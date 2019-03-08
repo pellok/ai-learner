@@ -141,5 +141,5 @@ s = np.stack([a, b,c], axis=1)
 print(s.shape) #(2, 3, 2)
 ```
 
-
+[更多練習](https://github.com/rougier/numpy-100/blob/master/100_Numpy_exercises.ipynb)
 
