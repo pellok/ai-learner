@@ -6,15 +6,35 @@
 
 投影片 PDF:[投影片PDF下載連結](https://drive.google.com/file/d/1Tn_swvB0JxeIDhyrJmbZdwvNsV8_-Rga/view)
 
-[part4\_Function](https://www.youtube.com/watch?v=h9EgCu0FusA) 
+[part4\_Function](https://www.youtube.com/watch?v=h9EgCu0FusA)
 
-Syntax, Define, Call Function, Repetition, Return Statement, Multiple return values, 
+Syntax, Define, Call Function, Repetition, Return Statement, Multiple return values,
 
 Anonymous Function - Lambda
 
 Map Function
 
 Global, Local variables
+
+
+
+[part5\_Generators](https://www.youtube.com/watch?time_continue=2&v=5MmlPvbXpKA)
+
+generator with for loop
+
+yield: 保留function 狀態，等待下次呼叫
+
+```
+def generator_example():
+    a=1
+    yield print(a) #1
+    a+=1
+    yield print(a) #2
+    return
+
+for i in generator_example():
+    continue
+```
 
 
 
