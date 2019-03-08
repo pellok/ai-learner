@@ -129,6 +129,16 @@ s = np.stack([a, b,c], axis=0)
  [[ 8  9]
   [10 11]]]
 print(s.shape) #(3, 2, 2)
+
+s = np.stack([a, b,c], axis=1)
+[[[ 0  1]
+  [ 4  5]
+  [ 8  9]]
+
+ [[ 2  3]
+  [ 6  7]
+  [10 11]]]
+print(s.shape) #(2, 3, 2)
 ```
 
 
