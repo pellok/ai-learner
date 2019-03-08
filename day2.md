@@ -16,8 +16,6 @@ Map Function
 
 Global, Local variables
 
-
-
 [part5\_Generators](https://www.youtube.com/watch?time_continue=2&v=5MmlPvbXpKA)
 
 generator with for loop
@@ -35,6 +33,64 @@ def generator_example():
 for i in generator_example():
     continue
 ```
+
+```
+def generator_example():
+  yield print(1)
+  yield print(2)
+
+gen = generator_example()
+try :
+  gen.__next__()
+  gen.__next__()
+  gen.__next__()
+except StopIteration:
+  pass
+```
+
+好處：
+
+Memory Usage - by using list 驗證
+
+
+
+Module
+
+re , os , psutil
+
+Regular Expression 正規表示式
+
+[更詳盡的 regular expression 符號解釋](/ https://atedev.wordpress.com/2007/11/23/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E7%A4%BA%E5%BC%8F-regular-expression/)
+
+[常見的 regular expression 寫法](https://www.analyticsvidhya.com/blog/2017/03/extracting-information-from-reports-using-regular-expressons-library-in-python/)
+
+special characters
+
+| 符號 | 說明 |
+| :--- | :--- |
+| . | 任何字元 |
+| \* | 匹配零個或重複字元 |
+| + | 匹配一個或重複字元 |
+| {m} | 匹配m次重複字元 |
+| {m,n} | 匹配m~n次 |
+| \ | 跳脫字元 |
+| \[\] \[0-9\] \[a-z\] | 中括號裡面所有字元都是想匹配的 |
+
+
+
+比對Email
+
+import re
+
+re.findall\("\(\[A-Za-z0-9.\_\]+@\[A-Za-z.\]+\[com\|edu\]\.tw\)"\)
+
+\#Output: \['felix2018@iis.sinica.edu.tw'\]
+
+
+
+Class
+
+
 
 
 
