@@ -6,11 +6,9 @@
 
 練習題下載：[連習題下載](https://drive.google.com/file/d/1U3Xj2V2FekxqGetDGjDNvatKFYvu5z9k/view)
 
-
-
 #### [Python\_Numpy](https://www.youtube.com/watch?v=GxdDFtz9KrM)
 
-axis 多維度，列 or 行，先列後行
+axis 多維度，列\(axis=0\) or 行\(axis=1\)，先列後行
 
 ```
 [[1,2,3],
@@ -64,6 +62,75 @@ c = [[0],[0]]
 np.concatenate((a,c),axis=1 )
 #array([[1, 2, 3, 0],
 #       [4, 5, 6, 0]])
+```
+
+Basic Operations 基本計算
+
+```
+import numpy as np
+a = np.array([[1, 2], [3, 4]])
+b = np.array([[5, 6], [7, 8]])
+print(a + b) # array([[6, 8], [10, 12]])
+print(a - b) # array([[-4, -4], [-4, -4]])
+print(a * b) # array([[5, 12], [21, 32]])
+print(a / b) # array([[0.2, 0.33333333], [0.42857143, 0.5]]
+print(a - 1) # array([[0, 1], [2, 3]])
+print(a * 2) # array([[2, 4], [6, 8]])
+```
+
+Basic Linear Algebra 線性代數計算
+
+```
+import numpy as np
+a = np.array([[0,1], [2,3]])
+# 轉置矩陣 m*n => n*m
+print(a.T) # [[0,2],
+           #  [1,3]]
+逆矩陣: n*n 矩陣A 存在一個 n*n矩陣B 使得AB = BA = I
+inverse = np.linalg.inv(a)
+print(inverse)
+
+#內積
+print(np.dot(a, inverse))
+```
+
+
+
+Vector Stacking 堆疊
+
+```
+import numpy as np 
+a = np.array([[0, 1], [2, 3]])
+b = np.array([[4, 5], [6, 7]])
+c = np.array([[8, 9], [10, 11]])
+
+# vertical 垂直疊加
+v = np.vstack((a, b, c))
+print(v)
+[[ 0  1]
+ [ 2  3]
+ [ 4  5]
+ [ 6  7]
+ [ 8  9]
+ [10 11]]
+
+# horizontal 水平疊加
+h = np.hstack((a, b, c))
+print(h)
+[[ 0  1  4  5  8  9]
+ [ 2  3  6  7 10 11]]
+ # stack 
+ s = np.stack([a, b,c], axis=0)
+ print(s)
+ [[[ 0  1]
+  [ 2  3]]
+
+ [[ 4  5]
+  [ 6  7]]
+
+ [[ 8  9]
+  [10 11]]]
+print(s.shape) #(3, 2, 2)
 ```
 
 
