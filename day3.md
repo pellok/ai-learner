@@ -94,8 +94,6 @@ print(inverse)
 print(np.dot(a, inverse))
 ```
 
-
-
 Vector Stacking 堆疊
 
 ```
@@ -104,7 +102,7 @@ a = np.array([[0, 1], [2, 3]])
 b = np.array([[4, 5], [6, 7]])
 c = np.array([[8, 9], [10, 11]])
 
-# vertical 垂直疊加
+# vertical 垂直堆疊
 v = np.vstack((a, b, c))
 print(v)
 [[ 0  1]
@@ -114,13 +112,13 @@ print(v)
  [ 8  9]
  [10 11]]
 
-# horizontal 水平疊加
+# horizontal 水平堆疊
 h = np.hstack((a, b, c))
 print(h)
 [[ 0  1  4  5  8  9]
  [ 2  3  6  7 10 11]]
- # stack 
- s = np.stack([a, b,c], axis=0)
+# stack 堆疊
+s = np.stack([a, b,c], axis=0)
  print(s)
  [[[ 0  1]
   [ 2  3]]
