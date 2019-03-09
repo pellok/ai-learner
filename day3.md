@@ -410,7 +410,7 @@ df.head()
 #4 FL  1 257 2009-02-02  correct
 ```
 
-Get the Summary Data by group 
+Get the Summary Data by group
 
 ```
 # group by State
@@ -450,7 +450,6 @@ Group by multiple indexes and hierarchical
 # Group 兩個以上欄位
 g_state = df.groupby(['StatusDate','State'], axis=0, sort=True).sum()
 g_state.head(10)
-
 ```
 
 Comine DataFrame
@@ -520,8 +519,21 @@ result = pd.merge(left, right, how='outer', on=['key1', 'key2'])
 
 # inner join
 result = pd.merge(left, right, how='inner', on=['key1', 'key2'])
-
 ```
+
+
+
+接下來的練習題，皆可從以下的資源找到答案。
+
+* [10 minutes to pandas](http://pandas.pydata.org/pandas-docs/stable/10min.html)
+
+* [pandas basics ](http://pandas.pydata.org/pandas-docs/stable/basics.html)
+
+* [tutorials ](http://pandas.pydata.org/pandas-docs/stable/tutorials.html)
+
+* [cookbook and idioms ](http://pandas.pydata.org/pandas-docs/version/0.17.0/cookbook.html#cookbook)
+
+* [Guilherme Samora's pandas exercises](https://github.com/guipsamora/pandas_exercises)
 
 
 
