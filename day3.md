@@ -662,13 +662,13 @@ kind : str
 [箱形圖（英文：_Box plot_）](https://zh.wikipedia.org/wiki/箱形圖)，又稱為盒鬚圖，是一種用作顯示一組數據分散情況資料的統計圖，它能顯示出一組數據的最大值、最小值、中位數、及上下四分位數
 
 ```
-                        +-----+-+       
+                        +-----+-+
 ```
 
 \*           o     \|-------\|   + \| \|---\|
 
 ```
-                        +-----+-+    
+                        +-----+-+
 ```
 
 +---+---+---+---+---+---+---+---+---+---+   分数
@@ -780,8 +780,6 @@ plt.show()
 
 [kaggle learn](https://www.kaggle.com/learn/pandas)
 
-
-
 #### [IntroMatplotlib](https://www.youtube.com/watch?time_continue=7&v=HLSJkoTH7Us)
 
 Matplotlib 畫圖library
@@ -852,8 +850,6 @@ axes.set_ylabel("y axis label")
 axes.set_title("Sine and Cosine")
 plt.legend(["Sine", "Cosine"])
 ```
-
-
 
 
 
