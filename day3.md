@@ -143,13 +143,51 @@ print(s.shape) #(2, 3, 2)
 
 [更多練習](https://github.com/rougier/numpy-100/blob/master/100_Numpy_exercises.ipynb) **100\_Numpy\_exercises.ipynb**
 
-
-
 #### [IntroPandas](https://www.youtube.com/watch?v=RVi3ybwJOEk)
 
 Store Data in DataFrame
 
+```
+import pandas as pd
+df = pd.DataFrame({
+  'names': ['Bob', 'Jessica', 'Mary', 'John', 'Mel'], 
+  'births': [968,155,77,578,973]
+})
 
+# 從list
+names = ['Bob', 'Jessica', 'Mary', 'John', 'Mel', 'Jim']
+births = [968, 155, 77, 578, 973, 968 ]
+data = list(zip(names, births))
+data_df = pd.DataFrame(data, columns=['Names', 'Births'])
+```
+
+Work With CSV
+
+* header
+* row index
+* encoding
+
+
+
+匯入資料
+
+```
+import pandas as pd
+df = pd.read_csv('birth_data.csv')
+# 指定欄位名稱
+df = pd.read_csv('birth_data.csv', names=['births', 'names'])
+# 指定第一行為 coloum index
+df = pd.read_csv('birth_data.csv', index_col=0)
+
+```
+
+匯出資料
+
+```
+import pands as pd
+# 儲存在目前的目錄
+df.to_csv('birth_data.csv') # index=True/False
+```
 
 
 
