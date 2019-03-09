@@ -167,8 +167,6 @@ Work With CSV
 * row index
 * encoding
 
-
-
 匯入資料
 
 ```
@@ -178,7 +176,6 @@ df = pd.read_csv('birth_data.csv')
 df = pd.read_csv('birth_data.csv', names=['births', 'names'])
 # 指定第一行為 coloum index
 df = pd.read_csv('birth_data.csv', index_col=0)
-
 ```
 
 匯出資料
@@ -188,6 +185,58 @@ import pands as pd
 # 儲存在目前的目錄
 df.to_csv('birth_data.csv') # index=True/False
 ```
+
+切分資料
+
+```
+df.head(n=5) # 前面幾筆
+df.tail(n=5) # 後面幾筆
+df[1:5] # 1 to 4 資料
+df.sample(5) # 隨機n筆資料
+```
+
+Make a Dataset
+
+```
+# Function to generate test data
+def CreateDataSet(Number=1):
+    Output = []
+    for i in range(Number):
+        # Create a weekly (mondays) date range
+        rng = pd.date_range(start='1/1/2009', end='12/31/2012', freq='W-MON') #random number generator
+        
+        # Create random data
+        data = np.random.randint(low=25, high=1000, size=len(rng))
+        
+        # Status pool
+        status = [1,2,3]
+        
+        # Make a random list of statuses
+        random_status = [status[np.random.randint(low=0, high=len(status))] for i in range(len(rng))]
+        
+        # State pool
+        states = ['GA','FL','fl','NY','NJ','TX']
+        
+        # Make a random list of states 
+        random_states = [states[np.random.randint(low=0, high=len(states))] for i in range(len(rng))]
+    
+        Output.extend(zip(random_states, random_status, data, rng))
+        #extend& append 差異
+        
+    return Output
+
+dataset = CreateDataSet(4)
+dataset
+len(dataset) #check shape
+df = pd.DataFrame(data=dataset, columns=['State','Status','CustomerCount','StatusDate'])
+df.head(10)
+```
+
+![](/assets/螢幕快照 2019-03-09 上午10.12.34.png)
+
+
+
+
 
 
 
