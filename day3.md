@@ -410,5 +410,118 @@ df.head()
 #4 FL  1 257 2009-02-02  correct
 ```
 
+Get the Summary Data by group 
+
+```
+# group by State
+g_state = df.groupby(['State'])
+# 顯示 g_state 的大小
+g_state.size()
+#State
+#FL    135
+#GA    155
+#NJ    148
+#NY    131
+#TX    132
+#fl    135
+#dtype: int64
+
+# 取得 group 好的 NJ 資料
+g_state.get_group("NJ").head()
+#17  NJ  3 607 2009-05-04  error
+#34  NJ  2 45  2009-08-31  error
+#46  NJ  3 490 2009-11-23  error
+#47  NJ  2 689 2009-11-30  error
+#50  NJ  2 232 2009-12-21  error
+
+# 匯總
+g_state.sum()
+
+# 計數
+g_state.count()
+
+# 計算
+g_state.sum()/g_state.count()
+```
+
+Group by multiple indexes and hierarchical
+
+```
+# Group 兩個以上欄位
+g_state = df.groupby(['StatusDate','State'], axis=0, sort=True).sum()
+g_state.head(10)
+
+```
+
+Comine DataFrame
+
+* LFFT join
+* IGHT join 
+* OUTER join 交集 
+* INNER join 聯集
+
+```
+# 欄位一樣只接使用 concat
+df.concat([df1, df2])
+
+df1 = pd.DataFrame({'A': ['A0', 'A1', 'A2', 'A3'],
+                    'B': ['B0', 'B1', 'B2', 'B3'],
+                    'C': ['C0', 'C1', 'C2', 'C3'],
+                    'D': ['D0', 'D1', 'D2', 'D3']},
+                    index=[0, 1, 2, 3])
+
+
+df2 = pd.DataFrame({'A': ['A4', 'A5', 'A6', 'A7'],
+                    'B': ['B4', 'B5', 'B6', 'B7'],
+                    'C': ['C4', 'C5', 'C6', 'C7'],
+                    'D': ['D4', 'D5', 'D6', 'D7']},
+                    index=[4, 5, 6, 7])
+## 垂直接上 dataframe
+result = pd.concat([df1, df2], axis = 0) #default = 0
+
+
+## 水平接上 dataframe
+result = pd.concat([df1, df2], axis = 1)
+
+
+# join 有left表和 right 表，關聯欄位 key1 和 key2，已left表為主(會有NaN問題)
+pd.merge(left,right, on=['key1', key2], how=left)
+# Join
+left = pd.DataFrame({'key': ['K0', 'K1', 'K2', 'K3'],
+                      'A': ['A0', 'A1', 'A2', 'A3'],
+                      'B': ['B0', 'B1', 'B2', 'B3']})
+
+right = pd.DataFrame({'key': ['K0', 'K1', 'K2', 'K3'],
+                       'C': ['C0', 'C1', 'C2', 'C3'],
+                       'D': ['D0', 'D1', 'D2', 'D3']})
+
+result = pd.merge(left, right, on = 'key')
+
+
+# 
+left = pd.DataFrame({'key1': ['K0', 'K0', 'K1', 'K2'],
+                      'key2': ['K0', 'K1', 'K0', 'K1'],
+                      'A': ['A0', 'A1', 'A2', 'A3'],
+                      'B': ['B0', 'B1', 'B2', 'B3']})
+
+right = pd.DataFrame({'key1': ['K0', 'K1', 'K1', 'K2'],
+                       'key2': ['K0', 'K0', 'K0', 'K0'],
+                       'C': ['C0', 'C1', 'C2', 'C3'],
+                       'D': ['D0', 'D1', 'D2', 'D3']})
+
+# left join
+result = pd.merge(left, right, on=['key1', 'key2'], how='left')
+
+# right join
+result = pd.merge(left, right, how='right', on=['key1', 'key2'])
+
+# outer join
+result = pd.merge(left, right, how='outer', on=['key1', 'key2'])
+
+# inner join
+result = pd.merge(left, right, how='inner', on=['key1', 'key2'])
+
+```
+
 
 
