@@ -661,49 +661,6 @@ kind : str
 
 [箱形圖（英文：_Box plot_）](https://zh.wikipedia.org/wiki/箱形圖)，又稱為盒鬚圖，是一種用作顯示一組數據分散情況資料的統計圖，它能顯示出一組數據的最大值、最小值、中位數、及上下四分位數
 
-```
-                        +-----+-+
-```
-
-\*           o     \|-------\|   + \| \|---\|
-
-```
-                        +-----+-+
-```
-
-+---+---+---+---+---+---+---+---+---+---+   分数
-
-0   1   2   3   4   5   6   7   8   9  10
-
-這組數據顯示出：
-
-最小值\(minimum\)=5
-
-下四分位數\(Q1\)=7
-
-中位數\(Med --也就是Q2\)=8.5
-
-上四分位數\(Q3\)=9
-
-最大值\(maximum \)=10
-
-平均值=8
-
-四分位間距\(interquartile range\)= {\displaystyle \(Q3-Q1\)} {\displaystyle \(Q3-Q1\)}=2 \(即ΔQ\)
-
-在區間 Q3+1.5ΔQ, Q1-1.5ΔQ 之外的值被視為應忽略\(farout\)。
-
-* farout: 在圖上不予顯示，僅標註一個符號∇。
-
-* 最大值區間： Q3+1.5ΔQ
-
-* 最小值區間： Q1-1.5ΔQ
-
-最大值與最小值產生於這個區間。區間外的值被視為outlier顯示在圖上.
-
-* mild outlier （離群值\) = 3.5
-* extreme outlier \(極端值\) = 0.5
-
 Box Plot 箱行圖
 
 ```
@@ -729,20 +686,6 @@ iris_DF.plot(x = "petal length (cm)", y = "petal width (cm)", kind = "scatter")
 iris_DF.plot(x = "petal length (cm)", y = "sepal length (cm)", kind = "scatter", logx= True)
 plt.show()
 ```
-
-Pandas plot API
-
-* Three different DataFrame plot idioms
-
-  * iris.plot\(kind='hist'\)
-
-  * iris.plt.hist\(\)
-
-  * iris.hist\(\)
-
-* Syntax/result differ!
-
-* Plandas API still evolving: check documentation!
 
 Draw a histogram\(長條圖\)
 
@@ -839,17 +782,170 @@ plt.show()
 使用 Object 方法畫圖
 
 ```
+# 新增一張底版
 fig = plt.figure()
+
 #新增Figure的軸（左,下,寬度,高度)，範圍佔Figure的比例（數值介於0-1）
 axes = fig.add_axes([0.1, 0.1, 0.8, 0.8])
+
+# 畫上 sin 線
 axes.plot(x,y_sin)
+
+# 畫上 cos 線
 axes.plot(x,y_cos)
+
 # 注意這邊不一樣 object 使用 set_xlable 和 set_ylabel
 axes.set_xlabel("x axis label")
 axes.set_ylabel("y axis label")
+
+# 設定title
 axes.set_title("Sine and Cosine")
+
+# 畫書legend
 plt.legend(["Sine", "Cosine"])
 ```
 
+Use axes to make plot in plot 製作圖中圖
 
+```
+#製作空白的figure來製作圖中圖
+fig = plt.figure()
+
+#在figure上建立第一個圖主要的軸，再設定第二個圖的軸（剛剛只畫第一個圖看不太出來差異，製作第二個軸就看得出來）
+axes1 = fig.add_axes([0.1, 0.1, 0.8, 0.8])
+axes2 = fig.add_axes([0.2, 0.5, 0.4, 0.3])
+
+#第一個大圖
+axes1.plot(x, y, 'r') #r紅色線
+axes1.set_xlabel('x axis label')
+axes1.set_ylabel('y axis label')
+axes1.set_title('cosine')
+
+#第二個較小的圖
+axes2.plot(x, y, 'b') #b藍色線
+axes2.set_xlabel('sal')
+axes2.set_ylabel('num')
+axes2.set_title('sine');
+```
+
+範例：銷售報表圖
+
+```
+下載資料
+df = pd.read_excel("https://github.com/chris1610/pbpython/blob/master/data/sample-salesv3.xlsx?raw=true")
+df.head()
+
+print(df.shape)
+#(1500, 7)
+
+#
+df.groupby("name").size().head()
+#name
+#Barton LLC                         82
+#Cronin, Oberbrunner and Spencer    67
+#Frami, Hills and Schmidt           72
+#Fritsch, Russel and Anderson       81
+#Halvorson, Crona and Champlin      58
+#dtype: int64
+
+# 將前十名依據採購次數和交易額做排序
+top_10 = df.groupby('name')['ext price', 'quantity'].agg({'ext price': 'sum', 'quantity': 'count'}).sort_values(by='ext price', ascending=False)[:10].reset_index()
+print(top_10)
+
+# 從新設定欄位名稱
+top_10.rename(columns={'name': 'Name', 'ext price': 'Sales', 'quantity': 'Purchases'}, inplace=True) #replace 
+top_10
+
+
+# 使用 ggplot 風格
+plt.style.use('ggplot')
+
+# 繪製長條圖
+top_10.plot(kind='barh', y="Sales", x="Name")
+plt.show()
+
+## currect function 會將超過一千的數字轉換成文字 K, M
+def currency(x, pos):
+    'The two args are the value and tick position'
+    if x >= 1000000:
+        return '${:1.1f}M'.format(x*1e-6)
+    return '${:1.0f}K'.format(x*1e-3)
+    
+from matplotlib.ticker import FuncFormatter
+#建立 fig, ax
+fig, ax = plt.subplots()
+
+# 將 Barplot (x=名稱, y=銷售量) 繪製在 ax上
+top_10.plot(kind='barh', y="Sales", x="Name", ax=ax)
+
+# 設置 x 範圍
+ax.set_xlim([-10000, 140000])
+
+# 給訂 title, label
+ax.set(title='2014 Revenue', xlabel='Total Revenue', ylabel='Customer')
+
+# 建立要使用的格式函數
+formatter = FuncFormatter(currency)
+ax.xaxis.set_major_formatter(formatter)
+
+# 將 legend 遮蔽掉
+ax.legend().set_visible(False)
+
+
+fig, (ax0, ax1) = plt.subplots(nrows=1, ncols=2, sharey=True, figsize=(7, 4))
+top_10.plot(kind='barh', y="Sales", x="Name", ax=ax0)
+ax0.set_xlim([-10000, 140000])
+ax0.set(title='Revenue', xlabel='Total Revenue', ylabel='Customers')
+
+# Plot the average as a vertical line
+avg = top_10['Sales'].mean()
+ax0.axvline(x=avg, color='b', label='Average', linestyle='--', linewidth=1)
+
+# Repeat for the unit plot
+top_10.plot(kind='barh', y="Purchases", x="Name", ax=ax1)
+avg = top_10['Purchases'].mean()
+ax1.set(title='Units', xlabel='Total Units', ylabel='')
+ax1.axvline(x=avg, color='b', label='Average', linestyle='--', linewidth=1)
+
+# Title the figure
+fig.suptitle('2014 Sales Analysis', fontsize=14, fontweight='bold');
+
+# Hide the legends
+ax1.legend().set_visible(False)
+ax0.legend().set_visible(False)
+```
+
+
+
+
+
+Scatter plot 分佈圖
+
+```
+import numpy as np 
+import matplotlib.pyplot as plt
+
+X = np.random.normal(0, 1, 100)
+Y = np.random.normal(0, 1, 100)
+plt.scatter(X, Y)
+plt.title("Scatter plot")
+plt.show()
+```
+
+
+
+```
+import numpy as np 
+import matplotlib.pyplot as plt
+
+X = np.random.normal(0, 1, 1000)
+Y = np.random.normal(0, 1, 1000)
+plt.scatter(X, Y, alpha=0.5)
+plt.title("Scatter plot")
+plt.show()
+```
+
+
+
+想挑戰更多 matplotlib 的圖形可參考 [ython-matplotlib-plotting-examples-and-exercises](http://gree2.github.io/python/2015/04/10/python-matplotlib-plotting-examples-and-exercises)
 
