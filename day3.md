@@ -8,6 +8,14 @@
 
 #### [Python\_Numpy](https://www.youtube.com/watch?v=GxdDFtz9KrM)
 
+
+
+安裝：
+
+```
+pip install numpy
+```
+
 axis 多維度，列\(axis=0\) or 行\(axis=1\)，先列後行
 
 ```
@@ -144,6 +152,12 @@ print(s.shape) #(2, 3, 2)
 [更多練習](https://github.com/rougier/numpy-100/blob/master/100_Numpy_exercises.ipynb) **100\_Numpy\_exercises.ipynb**
 
 #### [IntroPandas](https://www.youtube.com/watch?v=RVi3ybwJOEk)
+
+安裝
+
+```
+pip install pandas
+```
 
 Store Data in DataFrame
 
@@ -533,9 +547,96 @@ result = pd.merge(left, right, how='inner', on=['key1', 'key2'])
 
 * [Guilherme Samora's pandas exercises](https://github.com/guipsamora/pandas_exercises)
 
-
-
 請參考[100-pandas-puzzles](https://github.com/ajcr/100-pandas-puzzles/blob/master/100-pandas-puzzles.ipynb)做更多 pandas 的資料操作練習
+
+
+
+
+
+#### [PandasExercise](https://www.youtube.com/watch?v=eItz2E4WmVM)
+
+安裝
+
+```
+pip install matplotlib
+pip install sklearn
+```
+
+[The iris data set 鳶尾花卉數據集](https://zh.wikipedia.org/wiki/%E5%AE%89%E5%BE%B7%E6%A3%AE%E9%B8%A2%E5%B0%BE%E8%8A%B1%E5%8D%89%E6%95%B0%E6%8D%AE%E9%9B%86)（英文：_Iris _flower _data set_）
+
+它最初是埃德加·安德森從加拿大加斯帕半島上的鳶尾屬花朵中提取的形態學變異數據，後由羅納德·費雪作為判別分析的一個例子，運用到統計學中。
+
+其數據集包含了150個樣本，都屬於鳶尾屬下的三個亞屬，分別是山鳶尾、變色鳶尾和維吉尼亞鳶尾。四個特徵被用作樣本的定量分析，它們分別是花萼和花瓣的長度和寬度。基於這四個特徵的集合，費雪發展了一個線性判別分析以確定其屬種。
+
+150 observation 樣本
+
+3 species 種類 : 山鳶尾, 變色鳶尾, 維吉尼亞鳶尾
+
+4 features 特徵
+
+* sepal length  花萼長度
+* sepal width  花萼寬度
+* petal length 花瓣長度
+* peta width 花瓣寬度
+
+Load Dataset
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn import datasets
+import pandas as pdi
+# 載入 iris data set
+iris = datasets.load_iris() 
+
+type(iris.data)
+# numpy.ndarray
+
+iris.feature_names
+#['sepal length (cm)',
+# 'sepal width (cm)',
+# 'petal length (cm)',
+# 'petal width (cm)']
+```
+
+referance [https://scikit-learn.org/stable/datasets/index.html](https://scikit-learn.org/stable/datasets/index.html)
+
+Make a DataFrame
+
+```
+# Make a DF
+iris_DF = pd.DataFrame(iris.data, columns= iris.feature_names)
+iris_DF.head()
+
+# 增加一個 species 欄位，值為 temp
+iris_DF["species"] = "temp"
+
+# 第 0~49 行的 species 的值改為 setosa
+iris_DF.loc[:49,'species'] = "setosa"
+
+# 第 50~99 行的 species 的值改為 versicolor
+iris_DF.loc[50:99,'species'] = "versicolor"
+
+# 第 100~149 行的 species 的值改為 virginica
+iris_DF.loc[100:149,'species'] = "virginica"
+iris_DF
+
+# 查看 species 的大小
+iris_DF.groupby("species").size()
+#species
+#setosa        50
+#versicolor    50
+#virginica     50
+#dtype: int64
+
+# 查看 species 的描述
+iris_DF['species'].describe()
+#count        150
+#unique         3
+#top       setosa
+#freq          50
+#Name: species, dtype: object
+```
 
 
 
