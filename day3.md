@@ -344,7 +344,34 @@ print(df.loc[0:5,"State"])
 #Name: State, dtype: object
 ```
 
+iloc
 
+```
+# row 依據 row 取資料
+print(df.iloc[0:3])
+#  State  Status  CustomerCount StatusDate
+#0    FL       2            506 2009-01-05
+#1    TX       2            979 2009-01-12
+#2    GA       2            118 2009-01-19
+
+
+# column 依據 column 取資料
+print(df.iloc[:,2.head())
+#0    506
+#1    979
+#2    118
+#3    302
+#4    257
+#Name: CustomerCount, dtype: int64
+
+#Slicing on both row & column
+print(df.iloc[1:5,[2,3]])
+#   CustomerCount StatusDate
+#1            979 2009-01-12
+#2            118 2009-01-19
+#3            302 2009-01-26
+#4            257 2009-02-02
+```
 
 
 
