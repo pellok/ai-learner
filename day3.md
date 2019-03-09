@@ -735,6 +735,8 @@ import matplotlib.pyplot as plt
 
 Plotting
 
+basic：[https://matplotlib.org/api/axes\_api.html](https://matplotlib.org/api/axes_api.html)
+
 ```
 import matplotlib.pyplot as plt
 %matplotlib inline
@@ -781,6 +783,8 @@ plt.show()
 
 使用 Object 方法畫圖
 
+Axes：[https://matplotlib.org/api/axes\_api.html](https://matplotlib.org/api/axes_api.html)
+
 ```
 # 新增一張底版
 fig = plt.figure()
@@ -804,6 +808,27 @@ axes.set_title("Sine and Cosine")
 # 畫書legend
 plt.legend(["Sine", "Cosine"])
 ```
+
+Subplots vs Axes
+
+axes：自由擺放的圖表，甚至可以互相重疊
+
+subplot：是自動對齊到網格
+
+```
+# 兩行一列的的一個圖表
+plt.subplot(2,1,1) # (row, column, index)
+plt.plot(x, y_sin)
+plt.title("Sine")
+
+plt.subplot(2,1,2)
+plt.plot(x, y_cos)
+plt.title("Cosine")
+
+plt.show()
+```
+
+
 
 Use axes to make plot in plot 製作圖中圖
 
@@ -847,7 +872,11 @@ df.groupby("name").size().head()
 #Fritsch, Russel and Anderson       81
 #Halvorson, Crona and Champlin      58
 #dtype: int64
+```
 
+處理資料
+
+```
 # 將前十名依據採購次數和交易額做排序
 top_10 = df.groupby('name')['ext price', 'quantity'].agg({'ext price': 'sum', 'quantity': 'count'}).sort_values(by='ext price', ascending=False)[:10].reset_index()
 print(top_10)
@@ -855,8 +884,11 @@ print(top_10)
 # 從新設定欄位名稱
 top_10.rename(columns={'name': 'Name', 'ext price': 'Sales', 'quantity': 'Purchases'}, inplace=True) #replace 
 top_10
+```
 
+繪製長條圖
 
+```
 # 使用 ggplot 風格
 plt.style.use('ggplot')
 
@@ -870,7 +902,7 @@ def currency(x, pos):
     if x >= 1000000:
         return '${:1.1f}M'.format(x*1e-6)
     return '${:1.0f}K'.format(x*1e-3)
-    
+
 from matplotlib.ticker import FuncFormatter
 #建立 fig, ax
 fig, ax = plt.subplots()
@@ -890,8 +922,11 @@ ax.xaxis.set_major_formatter(formatter)
 
 # 將 legend 遮蔽掉
 ax.legend().set_visible(False)
+```
 
+fig, ax in matplotlib
 
+```
 fig, (ax0, ax1) = plt.subplots(nrows=1, ncols=2, sharey=True, figsize=(7, 4))
 top_10.plot(kind='barh', y="Sales", x="Name", ax=ax0)
 ax0.set_xlim([-10000, 140000])
@@ -917,8 +952,6 @@ ax0.legend().set_visible(False)
 
 
 
-
-
 Scatter plot 分佈圖
 
 ```
@@ -932,8 +965,6 @@ plt.title("Scatter plot")
 plt.show()
 ```
 
-
-
 ```
 import numpy as np 
 import matplotlib.pyplot as plt
@@ -944,8 +975,6 @@ plt.scatter(X, Y, alpha=0.5)
 plt.title("Scatter plot")
 plt.show()
 ```
-
-
 
 想挑戰更多 matplotlib 的圖形可參考 [ython-matplotlib-plotting-examples-and-exercises](http://gree2.github.io/python/2015/04/10/python-matplotlib-plotting-examples-and-exercises)
 
