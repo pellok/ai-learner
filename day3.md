@@ -373,5 +373,42 @@ print(df.iloc[1:5,[2,3]])
 #4            257 2009-02-02
 ```
 
+Conditional Data
+
+```
+# 取得 State 欄位 等於 'FL' 的資料
+df.loc[df.State == 'FL']
+# 取得 State 欄位 等於 'FL' 和 Status == 3 的資料
+df.loc[(df.State == 'FL') & (df['Status'] == 3)]
+# 取出並+1
+print((df['Status'] + 1).head())
+# 取出 Status 的值
+print(df['Status'].head().values)
+```
+
+Generate a vector by function
+
+```
+# 套用 func 到每個 Column，每個column有幾個row
+print(df.apply(len, axis=0)) # 0 -> column
+# 套用 func 到每個 row，每個row有幾個column
+print(df.apply(len, axis=1)) # 1 -> row
+
+# 計算Status數值並回傳Text
+def text(df):
+    status = df['Status']
+    return 'correct' if status == 1 else 'error'
+
+# 對每一個 row 作運算，計算完結果存在StatusText 欄位
+df['StatusText'] = df.apply(text, axis=1) 
+df.head()
+#State Status  CustomerCount StatusDate  StatusText
+#0 FL  2 506 2009-01-05  error
+#1 TX  2 979 2009-01-12  error
+#2 GA  2 118 2009-01-19  error
+#3 fl  1 302 2009-01-26  correct
+#4 FL  1 257 2009-02-02  correct
+```
+
 
 
