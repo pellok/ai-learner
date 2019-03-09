@@ -8,8 +8,6 @@
 
 #### [Python\_Numpy](https://www.youtube.com/watch?v=GxdDFtz9KrM)
 
-
-
 安裝：
 
 ```
@@ -549,10 +547,6 @@ result = pd.merge(left, right, how='inner', on=['key1', 'key2'])
 
 請參考[100-pandas-puzzles](https://github.com/ajcr/100-pandas-puzzles/blob/master/100-pandas-puzzles.ipynb)做更多 pandas 的資料操作練習
 
-
-
-
-
 #### [PandasExercise](https://www.youtube.com/watch?v=eItz2E4WmVM)
 
 安裝
@@ -562,7 +556,7 @@ pip install matplotlib
 pip install sklearn
 ```
 
-[The iris data set 鳶尾花卉數據集](https://zh.wikipedia.org/wiki/%E5%AE%89%E5%BE%B7%E6%A3%AE%E9%B8%A2%E5%B0%BE%E8%8A%B1%E5%8D%89%E6%95%B0%E6%8D%AE%E9%9B%86)（英文：_Iris _flower _data set_）
+[The iris data set 鳶尾花卉數據集](https://zh.wikipedia.org/wiki/安德森鸢尾花卉数据集)（英文：_Iris \_flower \_data set_）
 
 它最初是埃德加·安德森從加拿大加斯帕半島上的鳶尾屬花朵中提取的形態學變異數據，後由羅納德·費雪作為判別分析的一個例子，運用到統計學中。
 
@@ -621,7 +615,7 @@ iris_DF.loc[50:99,'species'] = "versicolor"
 iris_DF.loc[100:149,'species'] = "virginica"
 iris_DF
 
-# 查看 species 的大小
+# group species 並顯示大小
 iris_DF.groupby("species").size()
 #species
 #setosa        50
@@ -629,7 +623,7 @@ iris_DF.groupby("species").size()
 #virginica     50
 #dtype: int64
 
-# 查看 species 的描述
+# 查看 species 的描述，顯示基礎統計資料
 iris_DF['species'].describe()
 #count        150
 #unique         3
@@ -638,5 +632,144 @@ iris_DF['species'].describe()
 #Name: species, dtype: object
 ```
 
+EDA
 
+```
+# 依據第一列 產生一個 box plot 
+iris_DF.iloc[:,1].plot(kind = "box")
+
+# Show the plot
+plt.show()
+```
+
+[pandas.DataFrame.plot 參考](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.html)
+
+```
+kind : str
+'line' : line plot (default)
+'bar' : vertical bar plot
+'barh' : horizontal bar plot
+'hist' : histogram
+'box' : boxplot
+'kde' : Kernel Density Estimation plot
+'density' : same as 'kde'
+'area' : area plot
+'pie' : pie plot
+'scatter' : scatter plot
+'hexbin' : hexbin plot
+```
+
+[箱形圖（英文：_Box plot_）](https://zh.wikipedia.org/wiki/%E7%AE%B1%E5%BD%A2%E5%9C%96)，又稱為盒鬚圖，是一種用作顯示一組數據分散情況資料的統計圖，它能顯示出一組數據的最大值、最小值、中位數、及上下四分位數
+
+                            +-----+-+       
+
+  \*           o     \|-------\|   + \| \|---\|
+
+                            +-----+-+    
+
++---+---+---+---+---+---+---+---+---+---+   分数
+
+0   1   2   3   4   5   6   7   8   9  10
+
+這組數據顯示出：
+
+最小值\(minimum\)=5
+
+下四分位數\(Q1\)=7
+
+中位數\(Med --也就是Q2\)=8.5
+
+上四分位數\(Q3\)=9
+
+最大值\(maximum \)=10
+
+平均值=8
+
+四分位間距\(interquartile range\)= {\displaystyle \(Q3-Q1\)} {\displaystyle \(Q3-Q1\)}=2 \(即ΔQ\)
+
+在區間 Q3+1.5ΔQ, Q1-1.5ΔQ 之外的值被視為應忽略\(farout\)。
+
+* farout: 在圖上不予顯示，僅標註一個符號∇。
+
+* 最大值區間： Q3+1.5ΔQ
+* 最小值區間： Q1-1.5ΔQ
+
+最大值與最小值產生於這個區間。區間外的值被視為outlier顯示在圖上.
+
+* mild outlier （離群值\) = 3.5
+* extreme outlier \(極端值\) = 0.5
+
+
+
+Box Plot 箱行圖
+
+```
+## 做quantile的EDA
+
+# Print the 5th and 95th percentiles
+# 所有欄位(sepal length, sepal width, peta length, peta width)
+kind = iris_DF.columns  
+# 百分位數  
+q = [0.05,0.25,0.75, 0.95]
+print(iris_DF[kind].count())
+print(iris_DF[kind].quantile(q))
+
+# # Generate a box plot
+iris_DF[kind].plot(kind='box') #draw all the column
+plt.show()
+
+```
+
+Scatter Plot 散布圖 or 散點圖
+
+```
+iris_DF.plot(x = "petal length (cm)", y = "petal width (cm)", kind = "scatter")
+iris_DF.plot(x = "petal length (cm)", y = "sepal length (cm)", kind = "scatter", logx= True)
+plt.show()
+```
+
+Pandas plot API
+
+* Three different DataFrame plot idioms
+
+        - iris.plot\(kind='hist'\)
+
+        - iris.plt.hist\(\)
+
+        - iris.hist\(\)
+
+* Syntax/result differ!
+* Plandas API still evolving: check documentation!
+
+
+
+Draw a histogram\(長條圖\)
+
+Visual EDA: all data
+
+```
+#Filtering by species
+
+indices = iris_DF['species'] == 'setosa'
+setosa = iris_DF.loc[indices,:] # extract new DataFrame
+indices = iris_DF['species'] == 'versicolor'
+versicolor = iris_DF.loc[indices,:] # extract new DataFrame
+indices = iris_DF['species'] == 'virginica'
+virginica = iris_DF.loc[indices,:] # extract new DataFrame
+
+## all flowers 
+iris_DF.plot(kind= 'hist', bins=50, range=(0,8), alpha=0.3, edgecolor='black')
+plt.title('Entire iris data set')
+plt.xlabel('[cm]')
+plt.figure(figsize=(18, 12), dpi=600)
+plt.show()
+
+# visualize setosa data
+setosa.plot(kind = "hist", bins = 50, range = (0,8), alpha = 0.3, edgecolor = "black")
+plt.title("setosa data set")
+plt.xlabel("[cm]")
+plt.show()
+```
+
+[PandasExercise2](https://www.youtube.com/watch?v=bYTxKNJ10gw)
 
