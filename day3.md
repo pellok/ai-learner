@@ -232,7 +232,80 @@ df = pd.DataFrame(data=dataset, columns=['State','Status','CustomerCount','Statu
 df.head(10)
 ```
 
-![](/assets/螢幕快照 2019-03-09 上午10.12.34.png)
+Data Observation 資料觀察
+
+```
+df['State'].unique() # 在State欄位有幾個唯一質
+#array(['FL', 'TX', 'GA', 'fl', 'NY', 'NJ'], dtype=object)
+
+df['State'].value_counts() # 在State每一個數值計算字數
+#GA    155
+#NJ    148
+#FL    135
+#fl    135
+#TX    132
+#NY    131
+#Name: State, dtype: int64
+
+df["StatusDate"].unique().shape
+#(209,)
+
+df.info # 讀取資料表的狀態
+#<class 'pandas.core.frame.DataFrame'>
+#RangeIndex: 836 entries, 0 to 835
+#Data columns (total 4 columns):
+#State            836 non-null object
+#Status           836 non-null int64
+#CustomerCount    836 non-null int64
+#StatusDate       836 non-null datetime64[ns]
+#dtypes: datetime64[ns](1), int64(2), object(1)
+#memory usage: 26.2+ KB
+
+df.columns
+#Index(['State', 'Status', 'CustomerCount', 'StatusDate'], dtype='object')
+
+```
+
+Index and Select Data
+
+* Square brackets
+* Advanced methods
+* loc
+* iloc
+
+Column Access
+
+```
+print(df["CustomerCount"].head(5))
+print(type(df["CustomerCount"]))
+#0    506
+#1    979
+#2    118
+#3    302
+#4    257
+#Name: CustomerCount, dtype: int64
+#<class 'pandas.core.series.Series'>
+
+print(df[["CustomerCount"]].head(5))
+print(type(df[["CustomerCount"]]))
+#   CustomerCount
+#0            506
+#1            979
+#2            118
+#3            302
+#4            257
+#<class 'pandas.core.frame.DataFrame'>
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
