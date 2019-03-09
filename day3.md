@@ -659,13 +659,17 @@ kind : str
 'hexbin' : hexbin plot
 ```
 
-[箱形圖（英文：_Box plot_）](https://zh.wikipedia.org/wiki/%E7%AE%B1%E5%BD%A2%E5%9C%96)，又稱為盒鬚圖，是一種用作顯示一組數據分散情況資料的統計圖，它能顯示出一組數據的最大值、最小值、中位數、及上下四分位數
+[箱形圖（英文：_Box plot_）](https://zh.wikipedia.org/wiki/箱形圖)，又稱為盒鬚圖，是一種用作顯示一組數據分散情況資料的統計圖，它能顯示出一組數據的最大值、最小值、中位數、及上下四分位數
 
-                            +-----+-+       
+```
+                        +-----+-+       
+```
 
-  \*           o     \|-------\|   + \| \|---\|
+\*           o     \|-------\|   + \| \|---\|
 
-                            +-----+-+    
+```
+                        +-----+-+    
+```
 
 +---+---+---+---+---+---+---+---+---+---+   分数
 
@@ -692,14 +696,13 @@ kind : str
 * farout: 在圖上不予顯示，僅標註一個符號∇。
 
 * 最大值區間： Q3+1.5ΔQ
+
 * 最小值區間： Q1-1.5ΔQ
 
 最大值與最小值產生於這個區間。區間外的值被視為outlier顯示在圖上.
 
 * mild outlier （離群值\) = 3.5
 * extreme outlier \(極端值\) = 0.5
-
-
 
 Box Plot 箱行圖
 
@@ -717,7 +720,6 @@ print(iris_DF[kind].quantile(q))
 # # Generate a box plot
 iris_DF[kind].plot(kind='box') #draw all the column
 plt.show()
-
 ```
 
 Scatter Plot 散布圖 or 散點圖
@@ -732,16 +734,15 @@ Pandas plot API
 
 * Three different DataFrame plot idioms
 
-        - iris.plot\(kind='hist'\)
+  * iris.plot\(kind='hist'\)
 
-        - iris.plt.hist\(\)
+  * iris.plt.hist\(\)
 
-        - iris.hist\(\)
+  * iris.hist\(\)
 
 * Syntax/result differ!
+
 * Plandas API still evolving: check documentation!
-
-
 
 Draw a histogram\(長條圖\)
 
@@ -771,5 +772,88 @@ plt.xlabel("[cm]")
 plt.show()
 ```
 
-[PandasExercise2](https://www.youtube.com/watch?v=bYTxKNJ10gw)
+#### [PandasExercise2](https://www.youtube.com/watch?v=bYTxKNJ10gw)
+
+更多 Panda 練習
+
+[pandas\_exercise](https://github.com/guipsamora/pandas_exercises)
+
+[kaggle learn](https://www.kaggle.com/learn/pandas)
+
+
+
+#### [IntroMatplotlib](https://www.youtube.com/watch?time_continue=7&v=HLSJkoTH7Us)
+
+Matplotlib 畫圖library
+
+```
+import matplotlib.pyplot as plt
+# 在 jupyter notebook 畫圖
+%matplotlib inline
+```
+
+Plotting
+
+```
+import matplotlib.pyplot as plt
+%matplotlib inline
+import pandas as pd
+
+# 畫出一個 sin 圖形
+import numpy as np
+x = np.arange(0, 3 * np.pi, 0.1)
+y = np.sin(x)
+print(x)
+print(y)
+plt.plot(x, y)
+plt.show()
+```
+
+雙圖合併
+
+```
+x = np.arange(0, 3 * np.pi, 0.1)
+y_sin = np.sin(x)
+y_cos = np.cos(x)
+
+# 第一張 sin 圖
+plt.plot(x, y_sin)
+
+# 第二張 cos 圖
+plt.plot(x, y_cos)
+
+# 設定 x 軸 名稱
+plt.xlabel("x axis label")
+
+# 設定 y 軸 名稱
+plt.ylabel("y axis label")
+
+# 設定 圖片標題 名稱
+plt.title("Since and Cosine")
+
+# 設定 解說
+plt.legend(["Sine", "Cosine"])
+
+# 顯示圖片
+plt.show()
+```
+
+使用 Object 方法畫圖
+
+```
+fig = plt.figure()
+#新增Figure的軸（左,下,寬度,高度)，範圍佔Figure的比例（數值介於0-1）
+axes = fig.add_axes([0.1, 0.1, 0.8, 0.8])
+axes.plot(x,y_sin)
+axes.plot(x,y_cos)
+# 注意這邊不一樣 object 使用 set_xlable 和 set_ylabel
+axes.set_xlabel("x axis label")
+axes.set_ylabel("y axis label")
+axes.set_title("Sine and Cosine")
+plt.legend(["Sine", "Cosine"])
+```
+
+
+
+
 
