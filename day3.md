@@ -263,7 +263,6 @@ df.info # 讀取資料表的狀態
 
 df.columns
 #Index(['State', 'Status', 'CustomerCount', 'StatusDate'], dtype='object')
-
 ```
 
 Index and Select Data
@@ -295,25 +294,16 @@ print(type(df[["CustomerCount"]]))
 #3            302
 #4            257
 #<class 'pandas.core.frame.DataFrame'>
+
+# 如果要取兩行，只能用DataFrame
+print(df[["CustomerCount", "Status"]].head(5))
+#   CustomerCount  Status
+#0            506       2
+#1            979       2
+#2            118       2
+#3            302       1
+#4            257       1
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
