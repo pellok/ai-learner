@@ -303,7 +303,48 @@ print(df[["CustomerCount", "Status"]].head(5))
 #2            118       2
 #3            302       1
 #4            257       1
+
+# slicing 取出StatusDate第100筆至105筆的資料
+print(df[100:106])
 ```
+
+Slicing with Pandas
+
+* DataFrame.loc \(label-base\)
+* DataFrame.iloc \(integer position-base\)
+
+loc
+
+```
+# row 依據 row 取資料
+print(df.loc[0:3])
+#  State  Status  CustomerCount StatusDate
+#0    FL       2            506 2009-01-05
+#1    TX       2            979 2009-01-12
+#2    GA       2            118 2009-01-19
+#3    fl       1            302 2009-01-26
+
+# column 依據 column 取資料
+print(df.loc[:,["State", "Status"]].head())
+#State Status
+#0 FL 2
+#1 TX 2
+#2 GA 2
+#3 fl 1
+#4 FL 1
+
+#Slicing on both row & column
+print(df.loc[0:5,"State"])
+#0    FL
+#1    TX
+#2    GA
+#3    fl
+#4    FL
+#5    GA
+#Name: State, dtype: object
+```
+
+
 
 
 
