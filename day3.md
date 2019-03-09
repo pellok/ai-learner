@@ -535,7 +535,7 @@ result = pd.merge(left, right, how='inner', on=['key1', 'key2'])
 
 
 
-### 請參考[100-pandas-puzzles](https://github.com/ajcr/100-pandas-puzzles/blob/master/100-pandas-puzzles.ipynb)做更多 pandas 的資料操作練習 {#%E8%AB%8B%E5%8F%83%E8%80%83-%3Ca-href%3D%22https%3A%2F%2Fgithub.com%2Fajcr%2F100-pandas-puzzles%2Fblob%2Fmaster%2F100-pandas-puzzles.ipynb%22-rel%3D%22nofollow%22-target%3D%22_blank%22%3E100-pandas-puzzles%3C%2Fa%3E-%E5%81%9A%E6%9B%B4%E5%A4%9A-pandas--%E7%9A%84%E8%B3%87%E6%96%99%E6%93%8D%E4%BD%9C%E7%B7%B4%E7%BF%92}
+請參考[100-pandas-puzzles](https://github.com/ajcr/100-pandas-puzzles/blob/master/100-pandas-puzzles.ipynb)做更多 pandas 的資料操作練習
 
 
 
