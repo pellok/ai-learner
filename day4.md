@@ -6,17 +6,9 @@
 
 投影片 PDF:[投影片PDF下載連結](https://drive.google.com/drive/folders/16hpIwZ6dNaD8CcNk4Yvq7jjrVFMTjPYZ)
 
+#### 
 
-
-
-
-#### 1. 敘述統計
-
-
-
-[hmwu\_StatR-01.1\_BasicStat-Descriptive](https://www.youtube.com/watch?v=dAAkpHCkIWY)
-
-
+#### [hmwu\_StatR-01.1\_BasicStat-Descriptive](https://www.youtube.com/watch?v=dAAkpHCkIWY) 敘述統計
 
 為什麼要學機率統計?
 
@@ -29,13 +21,10 @@
 * Nominal\(名目變數\), Categorical\(類別資料\), discrete：
 
 * Ordinal\(順序\)：
+
 * Interval:
 
 * Ratio\(連續資料\)
-
-
-
-
 
 資料描述：中心趨勢、分散程度
 
@@ -43,11 +32,9 @@
 
 峰態\(kurtosis\)係數
 
-
-
 [hmwu\_StatR-01.2\_BasicStat-Correlation](https://www.youtube.com/watch?v=BSrzkPP7r-w) 敘述統計
 
-相關係數 
+相關係數
 
 Pearson Correlation
 
@@ -62,21 +49,106 @@ HDLSS example
 * images圖片
 * microarray基因
 
-
-
 解法之一：Shrinkage
 
 google Penalized/Regularized/Shrinkage Methods
 
-
-
 [numpy 線係運](https://blog.csdn.net/zenghaitao0128/article/details/78715140)[算](https://blog.csdn.net/zenghaitao0128/article/details/78715140)
 
-[線性代數](https://ccjou.wordpress.com/2010/06/18/%e7%b7%9a%e6%80%a7%e4%bb%a3%e6%95%b8%e7%9a%84%e7%ac%ac%e4%b8%80%e5%a0%82%e8%aa%b2-%e7%9f%a9%e9%99%a3%e4%b9%98%e6%b3%95%e7%9a%84%e5%ae%9a%e7%be%a9/)[ 矩陣相乘](https://zh.wikipedia.org/wiki/%E7%9F%A9%E9%99%A3%E4%B9%98%E6%B3%95)
+[線性代數](https://ccjou.wordpress.com/2010/06/18/線性代數的第一堂課-矩陣乘法的定義/)[ 矩陣相乘](https://zh.wikipedia.org/wiki/矩陣乘法)
+
+#### [hmwu\_StatR-02.1\_Probability-Terminology](https://www.youtube.com/watch?v=zkz0XbmTAow) 機率分佈
+
+#### 是以數學函數的方式來表示隨機實驗中，不同的可能結果\(樣本空間之每個元素\)發生的可能性\(機率\)
+
+統計名詞：
+
+* A random experiment 隨機實驗：做一件事情當中，觀察到事情的不確定性，做完之後就知道答案是什麼
+
+* Outcome\(結果\)：做完的結果
+* Sample space\(樣本空間\)：所有Outcome所形成的集合
+
+        例子1: 投擲兩硬幣, 正\(Head\)反\(Tail\)面之樣本空間 S={HH, HT, TH, TT}.
+
+* Event\(事件\)：樣本空間裡面的子集合
+* Trial\(試驗\)：髓機實驗的最小單位
+
+        例子3: 投擲4枚硬幣的隨機實驗中，每投擲一次硬幣皆是一次「試驗」。
+
+* Probability \(機率\)：長期執行下來的結果，我有興趣的那個實驗的平均發生的次數多少
+
+* Random variable \(隨機變數\)：把事件對應的一個數線上去
 
 
 
-[hmwu\_StatR-02.1\_Probability-Terminology](https://www.youtube.com/watch?v=zkz0XbmTAow) 機率分佈
+機率質量函數 Probability Mass Function \(非連續型, 離散型\)
+
+* 機率質量函數把每個值對應到機率
+* 所有質量和為1
+
+機率密度函數 Probability Density Function \(連續型\)
+
+* 都是大於零的
+* 積分起來等於1
+* 算機率＝算積分
+
+常用機率分佈的應用
+
+Normal distribution：常態分佈
+
+Log-normal distribution：數值曲log之後常態分佈
+
+Discrete uniform distribution：離散型均勻分布, exp:丟骰子
+
+Binomial distribution：二項式分佈, 成功 or 失敗
+
+Negative binomial distribution：負二項分布, 成功K之前，失敗的次數
+
+Chi-squared distribution：標準常態的平方
+
+
+
+累積聚率分配函數CDF\(p\)：隨機機率變數小於某一個數字的機率是多少
+
+分位數Quantiles\(q\)：給你一個x 他的機率是p，反求給你機率p 他的x是多少，常出現在信賴區間
+
+
+
+統計改變了世界\[書\]
+
+
+
+#### [hmwu\_StatR-02.2\_Probability-Distribution](https://www.youtube.com/watch?time_continue=1&v=gwjlhKIP-9Q) 常見之分佈\(二項分佈、常態分佈\)
+
+伯努利試驗
+
+常態分佈,高斯分佈
+
+以常態機率逼近二項次機率
+
+
+
+#### [h](https://www.youtube.com/watch?v=cqtxb9uIFiE)[mwu\_StatR-02.3\_Probability-CLT](https://www.youtube.com/watch?v=cqtxb9uIFiE)
+
+大數法則\(LLN\)：由具有有限\(finite\)平均數μ的母體隨機抽樣，隨 著樣本數n的增加，樣本平均數 越接近母體的 平均數μ 
+
+中央極限定理\(CLT\)：由一具有平均數μ，標準差σ的母體中抽取樣本大小為n的簡單隨機樣本，當樣本大小n夠大時，樣本平均數的抽樣分配會近似於常態分配。
+
+
+
+[中央極限定理: 樣本平均之抽樣分佈](https://seeing-theory.brown.edu/basic-probability/cn.html)
+
+
+
+#### [hmwu\_StatR-03.1\_Estimation-MLE](https://www.youtube.com/watch?v=LjryNwhf8fU) 參數估計
+
+
+
+
+
+
+
+#### 
 
 
 
