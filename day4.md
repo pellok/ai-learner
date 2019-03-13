@@ -356,8 +356,6 @@ TukyHSD
 
 ANOVA+Post Hoc Test
 
-
-
 #### [hmwu\_StatR-06\_Smoothing](https://www.youtube.com/watch?v=cnnRtpGrWxk) 平滑技巧
 
 使用它來描述時間序列的趨勢，或描述一些變數之間的關係
@@ -378,11 +376,15 @@ Bandwith\(h\)
 
 Kernal Density Estimation
 
+Spline approximate to the top profile of the ruddy duck
+
+三次樣條插值法
 
 
 
+#### [hmwu\_StatR-10\_EDA](https://www.youtube.com/watch?v=XPUWZXujIS4) 探索式資料分析
 
-
+#### 什麼是探索是分析？
 
 
 
