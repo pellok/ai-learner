@@ -66,20 +66,24 @@ google Penalized/Regularized/Shrinkage Methods
 * A random experiment 隨機實驗：做一件事情當中，觀察到事情的不確定性，做完之後就知道答案是什麼
 
 * Outcome\(結果\)：做完的結果
+
 * Sample space\(樣本空間\)：所有Outcome所形成的集合
 
-        例子1: 投擲兩硬幣, 正\(Head\)反\(Tail\)面之樣本空間 S={HH, HT, TH, TT}.
+  ```
+    例子1: 投擲兩硬幣, 正\(Head\)反\(Tail\)面之樣本空間 S={HH, HT, TH, TT}.
+  ```
 
 * Event\(事件\)：樣本空間裡面的子集合
+
 * Trial\(試驗\)：髓機實驗的最小單位
 
-        例子3: 投擲4枚硬幣的隨機實驗中，每投擲一次硬幣皆是一次「試驗」。
+  ```
+    例子3: 投擲4枚硬幣的隨機實驗中，每投擲一次硬幣皆是一次「試驗」。
+  ```
 
 * Probability \(機率\)：長期執行下來的結果，我有興趣的那個實驗的平均發生的次數多少
 
 * Random variable \(隨機變數\)：把事件對應的一個數線上去
-
-
 
 機率質量函數 Probability Mass Function \(非連續型, 離散型\)
 
@@ -106,17 +110,11 @@ Negative binomial distribution：負二項分布, 成功K之前，失敗的次�
 
 Chi-squared distribution：標準常態的平方
 
-
-
 累積聚率分配函數CDF\(p\)：隨機機率變數小於某一個數字的機率是多少
 
 分位數Quantiles\(q\)：給你一個x 他的機率是p，反求給你機率p 他的x是多少，常出現在信賴區間
 
-
-
 統計改變了世界\[書\]
-
-
 
 #### [hmwu\_StatR-02.2\_Probability-Distribution](https://www.youtube.com/watch?time_continue=1&v=gwjlhKIP-9Q) 常見之分佈\(二項分佈、常態分佈\)
 
@@ -126,29 +124,53 @@ Chi-squared distribution：標準常態的平方
 
 以常態機率逼近二項次機率
 
-
-
 #### [h](https://www.youtube.com/watch?v=cqtxb9uIFiE)[mwu\_StatR-02.3\_Probability-CLT](https://www.youtube.com/watch?v=cqtxb9uIFiE)
 
-大數法則\(LLN\)：由具有有限\(finite\)平均數μ的母體隨機抽樣，隨 著樣本數n的增加，樣本平均數 越接近母體的 平均數μ 
+大數法則\(LLN\)：由具有有限\(finite\)平均數μ的母體隨機抽樣，隨 著樣本數n的增加，樣本平均數 越接近母體的 平均數μ
 
 中央極限定理\(CLT\)：由一具有平均數μ，標準差σ的母體中抽取樣本大小為n的簡單隨機樣本，當樣本大小n夠大時，樣本平均數的抽樣分配會近似於常態分配。
 
-
-
 [中央極限定理: 樣本平均之抽樣分佈](https://seeing-theory.brown.edu/basic-probability/cn.html)
-
-
 
 #### [hmwu\_StatR-03.1\_Estimation-MLE](https://www.youtube.com/watch?v=LjryNwhf8fU) 參數估計
 
+點估計\(動差法、最大概似法、最小平方法\)
+
+概似函數\(The Likelihood Function\)
+
+最大概似估計法\(Maximum Likelihood Estimation MLE\)
+
+點估計步驟：
+
+1. 抽取代表性樣本
+
+2. 選擇一個較佳的樣本統計量當估計式 3. 計算估計式的估計值
+
+3. 計算估計式的估計值
+
+4. 以該估計值推論母體參數並作決策
+
+
+
+區間估計
+
+
+
+#### [h](https://www.youtube.com/watch?v=GSTZZYKF47g)[mwu\_StatR-03.2\_Estimation-Bayes](https://www.youtube.com/watch?v=GSTZZYKF47g)
+
+貝氏定理
+
+後驗機率 = 可能性 x 先驗機率 / 標準化常量
+
+貝氏估計法
 
 
 
 
 
+#### [hmwu\_StatR-04.1\_Testing](https://www.youtube.com/watch?v=JPsG6Kurm3E) 假設檢定
 
-#### 
+
 
 
 
