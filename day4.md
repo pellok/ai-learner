@@ -234,5 +234,43 @@ Levene's is widely used and is typically the default in SPSS
 
 
 
+#### [hmwu\_StatR-05.2\_Normality](https://www.youtube.com/watch?v=BqtoBNGYprA) 無母樹統計
+
+常態分佈檢定\(Test for Normality\)
+
+卡方檢定\(Chi-Square Test\)
+
+
+
+#### [hmwu\_StatR-07.1\_MissingValues](https://www.youtube.com/watch?v=YWjdf3eCIPY) 缺失值處理
+
+資料的幾種缺失方式
+
+具缺失值資料 \(Missing Data\)
+
+1. 某個欄位全部無值，稱為latent or unobserved
+2. 在某一個case\(行\)上面都沒有值，稱為unit non-response
+3. 在每有個case\(行\)的某一個值，稱為 item non-response
+
+缺失值的處理：
+
+* 填上一個常數\(例如: 缺考給0分; 影像訊號=前景-背景\)
+* 以平均數或中位數去取代缺失值\(最常見\)
+
+缺失機制 \(Missingness Mechanism\)
+
+* MissingbyDesign
+* MissingCompletelyatRandom\(MCAR\)
+* MissingatRandom\(MAR\)
+* MissingNotatRandom\(MNAR\)
+
+
+
+#### [hmwu\_StatR-07.2\_Imputation](https://www.youtube.com/watch?v=h0mlHPol0K4) 缺失值補值方式
+
+
+
+
+
 
 
