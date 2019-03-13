@@ -338,13 +338,9 @@ ubRacing：同時分析上面八種方法，分析各方法優劣
 
 XGBoost：分類問題神器
 
-
-
 #### [hmwu\_StatR-05.1\_NonparametricTest](https://www.youtube.com/watch?v=8GLTYVfRNAs) 無母數統計
 
 什麼是無母數統計：
-
-
 
 平均數檢定
 
@@ -361,6 +357,26 @@ TukyHSD
 ANOVA+Post Hoc Test
 
 
+
+#### [hmwu\_StatR-06\_Smoothing](https://www.youtube.com/watch?v=cnnRtpGrWxk) 平滑技巧
+
+使用它來描述時間序列的趨勢，或描述一些變數之間的關係
+
+簡單移動平均：股價移動的平均，簡稱均線
+
+smooth, TTR 套件
+
+曲線配適\(Fitting Curves\)
+
+lowess{stats} 方法
+
+Density Plots\(Smoothed Histograms\)
+
+Kernel\(K\)
+
+Bandwith\(h\)
+
+Kernal Density Estimation
 
 
 
