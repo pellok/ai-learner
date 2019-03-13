@@ -174,8 +174,6 @@ exp：汽油一公升平均2.5，這一件事情合不合理，怎麼檢驗這�
 
 原來的命題到比正不正確？
 
-
-
 Hypothesis Testing
 
 虛無假設\(Hull hypotheis\)：H0=2.5
@@ -184,32 +182,23 @@ Hypothesis Testing
 
 顯著顏準\(significance level\)\(alpha\)：alpha=0.05，容忍錯誤5%
 
-
-
 型一誤差、型二誤差：固定型一誤差尋找型二誤差
-
-
 
 p-values
 
 * 定義:在已知\(現有\)的抽樣樣本下，能棄卻 H0\(虛無假設\)的最小顯著水準。\(Reject H0 \| H0 true\)
 
 * 若H0 為真，則檢定統計量出現\(觀察到此樣本\)的可能性。 \(若p-value越小，表示抽樣樣本越不可能出現，因此推翻假設，拒絕H0\)。
+
 * p-value:以現有的抽樣所進行的推論，可能犯typeIerror的機率。 \(若p-value越小，表示拒絕H0不太可能錯，因此拒絕H0\)
-
-
 
 Decision Rule ：p-values越小越要拒絕虛無假設，p值越小表示顯著性越高，容易誤用
 
 [林澤民，看電影學統計: p值的陷阱](http://blog.udn.com/nilnimest/84404190)
 
-
-
 T 檢定\(t-test\)：
 
 T分佈
-
-
 
 Test Homogeneity of Variances
 
@@ -225,8 +214,6 @@ fligner.test {stats}
 
 leveneTest {car}
 
-
-
 建議使用：
 
 Fligner-Killeen's
@@ -234,6 +221,22 @@ Fligner-Killeen's
 Levene's
 
 Levene's is widely used and is typically the default in SPSS
+
+
+
+
+
+#### [hmwu\_StatR-04.2\_ANOVA](https://www.youtube.com/watch?v=J-YrMTVl_ww)
+
+單因子變異數分析 \(One-way Analysis of Variance, ANOVA\)
+
+* T檢定的推廣，他是在比較兩個群組以上到底平均數一不一樣，或是多個因子以上他們的平均質一不一樣，
+
+* 單因子變異數分析就是用來比較，一個參數所形成出來的群組，他們的平均數到底一不一樣
+
+
+
+假設：
 
 
 
