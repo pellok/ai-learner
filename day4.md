@@ -314,8 +314,6 @@ under-sampling 減少大多數類別的觀察值
 
 over-sampling 增加少數類別的觀察值
 
-
-
 unbalanced 套件 方法：
 
 ubOver：
@@ -339,6 +337,34 @@ SVM 分類法：檢查上片的各方法優劣
 ubRacing：同時分析上面八種方法，分析各方法優劣
 
 XGBoost：分類問題神器
+
+
+
+#### [hmwu\_StatR-05.1\_NonparametricTest](https://www.youtube.com/watch?v=8GLTYVfRNAs) 無母數統計
+
+什麼是無母數統計：
+
+
+
+平均數檢定
+
+Sign Test 符號檢定法
+
+Kruskal-Wallis Test
+
+Parametric vs. Non-Parametric Test
+
+TukyHSD
+
+事後檢定\(Post Hoc Tests\)
+
+ANOVA+Post Hoc Test
+
+
+
+
+
+
 
 
 
