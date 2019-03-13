@@ -222,10 +222,6 @@ Levene's
 
 Levene's is widely used and is typically the default in SPSS
 
-
-
-
-
 #### [hmwu\_StatR-04.2\_ANOVA](https://www.youtube.com/watch?v=J-YrMTVl_ww)
 
 單因子變異數分析 \(One-way Analysis of Variance, ANOVA\)
@@ -234,21 +230,7 @@ Levene's is widely used and is typically the default in SPSS
 
 * 單因子變異數分析就是用來比較，一個參數所形成出來的群組，他們的平均數到底一不一樣
 
-
-
 假設：
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
