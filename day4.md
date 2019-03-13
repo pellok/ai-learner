@@ -150,11 +150,7 @@ Chi-squared distribution：標準常態的平方
 
 4. 以該估計值推論母體參數並作決策
 
-
-
 區間估計
-
-
 
 #### [h](https://www.youtube.com/watch?v=GSTZZYKF47g)[mwu\_StatR-03.2\_Estimation-Bayes](https://www.youtube.com/watch?v=GSTZZYKF47g)
 
@@ -164,11 +160,92 @@ Chi-squared distribution：標準常態的平方
 
 貝氏估計法
 
-
-
-
-
 #### [hmwu\_StatR-04.1\_Testing](https://www.youtube.com/watch?v=JPsG6Kurm3E) 假設檢定
+
+假設檢定：我想要知道對一個母體特性的命題，決定一下他和不合理的過程
+
+exp：汽油一公升平均2.5，這一件事情合不合理，怎麼檢驗這個命題正不正確？
+
+方法一：調查全國加油站，一公升的汽油平均多少
+
+方法二：調查一些加油站，對母體推估，抽了一個樣本平均價格2.2，
+
+這2.2根2.5差了0.3到底又沒有差別？
+
+原來的命題到比正不正確？
+
+
+
+Hypothesis Testing
+
+虛無假設\(Hull hypotheis\)：H0=2.5
+
+擇一假設\(alternative hypothesis\)：Ha: u &gt;2.5
+
+顯著顏準\(significance level\)\(alpha\)：alpha=0.05，容忍錯誤5%
+
+
+
+型一誤差、型二誤差：固定型一誤差尋找型二誤差
+
+
+
+p-values
+
+* 定義:在已知\(現有\)的抽樣樣本下，能棄卻 H0\(虛無假設\)的最小顯著水準。\(Reject H0 \| H0 true\)
+
+* 若H0 為真，則檢定統計量出現\(觀察到此樣本\)的可能性。 \(若p-value越小，表示抽樣樣本越不可能出現，因此推翻假設，拒絕H0\)。
+* p-value:以現有的抽樣所進行的推論，可能犯typeIerror的機率。 \(若p-value越小，表示拒絕H0不太可能錯，因此拒絕H0\)
+
+
+
+Decision Rule ：p-values越小越要拒絕虛無假設，p值越小表示顯著性越高，容易誤用
+
+[林澤民，看電影學統計: p值的陷阱](http://blog.udn.com/nilnimest/84404190)
+
+
+
+T 檢定\(t-test\)：
+
+T分佈
+
+
+
+Test Homogeneity of Variances
+
+var.test {stats}
+
+bartlett.test {stats}
+
+ansari.test {stats}
+
+mood.test {stats}
+
+fligner.test {stats}
+
+leveneTest {car}
+
+
+
+建議使用：
+
+Fligner-Killeen's
+
+Levene's
+
+Levene's is widely used and is typically the default in SPSS
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
