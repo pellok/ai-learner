@@ -386,7 +386,44 @@ Spline approximate to the top profile of the ruddy duck
 
 John Tukey 統計學的畢卡索
 
-問一個正確問題的重要性
+對正確的問題有個近似的答案，勝過對錯的問題有精確的答案
+
+提點我們：對問一個正確問題的重要性
+
+EDA不是精確科學，是非常重要的藝術
+
+一、圖形化進行, 二、量化方式進行
+
+背景知識、問題
+
+資料收集方式、變數資訊
+
+參與人角色
+
+資料處理、探索\(分析\)方法
+
+呈現：資訊/過程/結果
+
+範例一：Doubs Fish Data 資料探索
+
+範例二：川普推特誰寫的？
+
+推薦四本書：
+
+1. Grafhical Exploratory Data Analysis
+2. Making Sense of Data I
+3. Making Sense of Data II
+4. Making Sense of Data III
+5. 統計改變了世界
+6. The Seven Pillars of Statistical Wisdom
+
+Data Science Education
+
+2018 統計教學工作訪
+
+
+
+
 
 
 
