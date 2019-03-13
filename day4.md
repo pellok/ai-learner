@@ -288,15 +288,53 @@ NA：缺失值
 
 為什麼要學習重抽法則
 
-整合學習：較佳預測能力
+整體學習：較佳預測能力
 
 分類問題的其中一個技巧：交互驗證法
 
-將資料分為訓練集和測試集
-
-
+將資料分為訓練集和測試集，互相驗證
 
 第一個重抽法則 Jackknife Resampling: Leave-one-out
+
+自助法、拔鞋法 Bootstrap Methods
+
+統計人必看：Computer age statistical inference \[書\]\[作者：Bradly Efron 2016\]
+
+抽樣分佈
+
+Bagging：Bootstrap Aggregating
+
+
+
+#### [h](https://www.youtube.com/watch?v=dTMsMXVzPI0)[mwu\_StatR-09.2\_StatResampling-Unbalanced](https://www.youtube.com/watch?v=dTMsMXVzPI0) 不平衡資料的處理方法
+
+什麼事不平衡的資料：處理二元的分類問題，有興趣的類別的觀察值個數遠小於另外一個類別，資料有這樣的屬性就是不平衡的資料．
+
+exp：金融交易資料想預測是否為詐騙機率，詐騙資料只佔總資料的5%，95%屬於合法資料
+
+
+
+under-sampling
+
+
+
+over-sampling
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
