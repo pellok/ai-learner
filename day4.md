@@ -380,11 +380,15 @@ Spline approximate to the top profile of the ruddy duck
 
 三次樣條插值法
 
-
-
 #### [hmwu\_StatR-10\_EDA](https://www.youtube.com/watch?v=XPUWZXujIS4) 探索式資料分析
 
 #### 什麼是探索是分析？
+
+John Tukey 統計學的畢卡索
+
+問一個正確問題的重要性
+
+
 
 
 
