@@ -232,15 +232,11 @@ Levene's is widely used and is typically the default in SPSS
 
 假設：
 
-
-
 #### [hmwu\_StatR-05.2\_Normality](https://www.youtube.com/watch?v=BqtoBNGYprA) 無母樹統計
 
 常態分佈檢定\(Test for Normality\)
 
 卡方檢定\(Chi-Square Test\)
-
-
 
 #### [hmwu\_StatR-07.1\_MissingValues](https://www.youtube.com/watch?v=YWjdf3eCIPY) 缺失值處理
 
@@ -257,20 +253,26 @@ Levene's is widely used and is typically the default in SPSS
 * 填上一個常數\(例如: 缺考給0分; 影像訊號=前景-背景\)
 * 以平均數或中位數去取代缺失值\(最常見\)
 
-缺失機制 \(Missingness Mechanism\)
+缺失機制 \(Missingness Mechanism\) 以問卷調查為例
 
-* MissingbyDesign
-* MissingCompletelyatRandom\(MCAR\)
-* MissingatRandom\(MAR\)
-* MissingNotatRandom\(MNAR\)
+* MissingbyDesign：缺失是因為問卷設計，有些人拒絕回答或不知道答案
+* Missing Completely at Random\(MCAR\)： 缺失是隨機的，人為疏失\(補值\)
+* Missing at Random\(MAR\)：拒絕填寫問卷，女生比較不會填體重\(可忽略\)
+* Missing Not at Random\(MNAR\)：遺失不是隨機的，薪水遺失是跟本身有關\(不可忽略\)
 
+安全門坎：
 
+缺失比例不要超過5%，如果超出5%就排除掉，不要分析
+
+如果有25%缺失，就拿掉或增加資料
+
+條件機率
+
+#### 
 
 #### [hmwu\_StatR-07.2\_Imputation](https://www.youtube.com/watch?v=h0mlHPol0K4) 缺失值補值方式
 
-
-
-
+NA：缺失值
 
 
 
