@@ -304,33 +304,41 @@ NA：缺失值
 
 Bagging：Bootstrap Aggregating
 
-
-
 #### [h](https://www.youtube.com/watch?v=dTMsMXVzPI0)[mwu\_StatR-09.2\_StatResampling-Unbalanced](https://www.youtube.com/watch?v=dTMsMXVzPI0) 不平衡資料的處理方法
 
 什麼事不平衡的資料：處理二元的分類問題，有興趣的類別的觀察值個數遠小於另外一個類別，資料有這樣的屬性就是不平衡的資料．
 
 exp：金融交易資料想預測是否為詐騙機率，詐騙資料只佔總資料的5%，95%屬於合法資料
 
+under-sampling 減少大多數類別的觀察值
 
-
-under-sampling
-
-
-
-over-sampling
+over-sampling 增加少數類別的觀察值
 
 
 
+unbalanced 套件 方法：
 
+ubOver：
 
+ubUnder：
 
+ubCNN：
 
+ubENN：
 
+ubNCL：
 
+ubTomek：
 
+ubOSS：
 
+ubSMOTE
 
+SVM 分類法：檢查上片的各方法優劣
+
+ubRacing：同時分析上面八種方法，分析各方法優劣
+
+XGBoost：分類問題神器
 
 
 
