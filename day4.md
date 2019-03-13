@@ -276,3 +276,41 @@ NA：缺失值
 
 
 
+
+
+#### [hmwu\_StatR-08\_DataT1ransformation](https://www.youtube.com/watch?v=jw7JsGPuxcQ) 資料轉換
+
+為什麼要做資料轉換
+
+資料轉換
+
+標準化
+
+要使用哪一種資料轉換方式？
+
+
+
+
+
+#### [hmwu\_StatR-09.1\_StatResampling-Boosting](https://www.youtube.com/watch?v=aBO63WZnySA) 重抽法則
+
+為什麼要學習重抽法則
+
+整合學習：較佳預測能力
+
+分類問題的其中一個技巧：交互驗證法
+
+將資料分為訓練集和測試集
+
+
+
+
+
+
+
+
+
+
+
+
+
