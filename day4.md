@@ -274,10 +274,6 @@ Levene's is widely used and is typically the default in SPSS
 
 NA：缺失值
 
-
-
-
-
 #### [hmwu\_StatR-08\_DataT1ransformation](https://www.youtube.com/watch?v=jw7JsGPuxcQ) 資料轉換
 
 為什麼要做資料轉換
@@ -287,10 +283,6 @@ NA：缺失值
 標準化
 
 要使用哪一種資料轉換方式？
-
-
-
-
 
 #### [hmwu\_StatR-09.1\_StatResampling-Boosting](https://www.youtube.com/watch?v=aBO63WZnySA) 重抽法則
 
@@ -304,13 +296,7 @@ NA：缺失值
 
 
 
-
-
-
-
-
-
-
+第一個重抽法則 Jackknife Resampling: Leave-one-out
 
 
 
