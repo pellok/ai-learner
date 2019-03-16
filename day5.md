@@ -62,30 +62,22 @@ linear or non-linear
 * Logistic regression
 * Support Vector Machine\(SVM\)
 
-
-
 #### Regression 回歸
 
 * supervised learning task
 * 訓練和預測是回歸問題
 
-
-
 #### Over-fitting\(過度分類\) vs under-fitting\(輕度分類\)
-
-
 
 小考：
 
 Q:explain the difference between a supervised and unsupervised algorithm
 
-A: 
+A:
 
 supervised給的每筆資料中飽含 feature and target variable
 
 unsupervised給的每筆資料中只有 feature 沒有 target variable
-
-
 
 Q: Explain the difference between classification and regression
 
@@ -97,9 +89,7 @@ classification的target variable 型態是 categron variable
 
 regression的target variable 型態是 real number
 
-
-
-Q: Classify the normal mails and the junk mail based on the labeled datasets，Supervised or unsupervised? 
+Q: Classify the normal mails and the junk mail based on the labeled datasets，Supervised or unsupervised?
 
 A: supervised
 
@@ -109,5 +99,173 @@ A: regression
 
 
 
+### Regression 回歸
 
+Notions
+
+* Features x
+* Target y
+* Prediction y^
+* Parameter  sita
+
+
+
+## Linear regression 線性回歸
+
+#### 單一 feature y = sita0 + sita1 x
+
+sita1  =
+
+sita0 = 
+
+objective function
+
+#### 兩個 feature x1, x2
+
+y = sita0 + sita1 x + sita2 x平方
+
+#### 多個 Feature x1,x2...,xn: multiple linear regression
+
+Close from solution
+
+
+
+#### Gradient decent 移動調整 sita 的方法
+
+a: learning rate
+
+a : 在0~1之間
+
+shrink a as k becomes larger
+
+
+
+gadient decent 是不段的迭代來產生新的sita i的，什麼時候終止呢？
+
+* sita 值趨緩或者不進步，甚至變差了
+* 當traning error 很小了
+* 我們已經到達事先定義好的數字了
+* 已經到達事先定義好的時間了
+
+
+
+Close from solution vs Gradient decent
+
+空間複雜度：
+
+Close from solution：比較大
+
+Gradient decent：比較小
+
+運算複雜度：
+
+close from solution：O\(\)
+
+Gradient decent：O\(Tnd\)
+
+
+
+結論：數據大時要使用Gradient decent會更有效率
+
+有時候不一定會有Close from solution，
+
+但是可能可以使用Gradient decent來解
+
+
+
+#### One-hot encoding
+
+如果是 categorical 資料 ，可以轉換成線性關係
+
+
+
+#### 觀察 Overfitting ，解決 Overfitting 使用 Regularization 
+
+
+
+L2-regularization \(Ridge regression\)
+
+L1-regularization \(Lasso\)
+
+
+
+怎麼取 landa — 做實驗 像 Cross validation
+
+通常不使用  Unregularized linear regration，因為結果容易overfitting training data
+
+常用的是 Ridge and Lasso
+
+
+
+On Regularization 的 Ridge, Lasso and Elastic-net時機
+
+* Ridge : Good if many features have small /mediun sized effects
+* Lasso：Good if only a few features with a medium/large effects，容易讓 sita 變成0，相當於沒有作用
+* Elastic-net 介於上面兩者之間
+
+
+
+解釋 Ridge 和 Lasso 查別，為什麼Lasso 會讓 sita 變成0
+
+
+
+Stochastic gradient descent \(SGD\)
+
+一筆筆拿出來算，每次都更新 sita 值
+
+
+
+#### GD vs SGD
+
+Steps:
+
+GD: fewer steps
+
+SGD: more steps
+
+Computation of each step
+
+GD: look throught all the training instances
+
+SGD: look only one training instance
+
+
+
+#### SGD 的優缺點：
+
+優點：
+
+當資料量大時，比較快
+
+支援線上學習
+
+有時候可能可以跳過 local minimun 問題
+
+缺點：
+
+當我們在到達最低點時，可能會在附近跳動
+
+
+
+#### Mini-batch gradient descent ： 一次選一些資料決定GD
+
+
+
+#### GD vs SGC vs mini-batch GD
+
+GD：看完全部資料才更新一次
+
+SGC：看一筆資料更新一次
+
+mini-batch GD：看b次資料更新一次
+
+
+
+
+
+sun of scroll
+
+super of **squared**
+
+hyper parameter 操參數\(人工給定的參數\)
 
