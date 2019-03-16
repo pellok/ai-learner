@@ -161,13 +161,9 @@ Gradient decent：O\(Tnd\)
 
 但是可能可以使用Gradient decent來解
 
-
-
 #### One-hot encoding
 
 如果原本的feature 不是線性的，就可以用一些人工的方式讓feature 變成線性
-
-
 
 #### 觀察 Overfitting ，解決 Overfitting 使用 Regularization
 
@@ -237,21 +233,15 @@ super of **squared**
 
 hyper parameter 操參數\(人工給定的參數\)
 
-
-
 Convex function
 
-
-
-### 評估成效 
+### 評估成效
 
 #### Mean Square Error\(MSE\)
 
 相式方法：Root Mean Squared Error \(RMSE\)
 
 批評： not a normalized measur , 容易受極端值影響
-
-
 
 #### Mean Absolute Error \(MAE\)
 
@@ -261,15 +251,47 @@ Convex function
 
 比較不受極端值影響
 
-
-
-#### R2 score 
+#### R2 score
 
 分數為1，效果很好，理想值
 
 分數為0，效果像 Mean Model
 
 分數為-1，model 效果很差
+
+
+
+
+
+# 實作
+
+
+
+### Scikit-learn 介紹與實作
+
+step 1 ：定義問題
+
+step 2：蒐集、清理資料
+
+step 3 ：選擇及建立模型
+
+step 4：分析結果及修正模型
+
+step 5：結果呈現
+
+
+
+scikit-learn 囊括 step1~step4 的工具
+
+
+
+
+
+
+
+
+
+
 
 
 
