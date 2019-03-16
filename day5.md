@@ -97,8 +97,6 @@ Q: Predicting the price of stock? Classification or regression
 
 A: regression
 
-
-
 ### Regression 回歸
 
 Notions
@@ -108,15 +106,13 @@ Notions
 * Prediction y^
 * Parameter  sita
 
-
-
 ## Linear regression 線性回歸
 
 #### 單一 feature y = sita0 + sita1 x
 
 sita1  =
 
-sita0 = 
+sita0 =
 
 objective function
 
@@ -128,8 +124,6 @@ y = sita0 + sita1 x + sita2 x平方
 
 Close from solution
 
-
-
 #### Gradient decent 移動調整 sita 的方法
 
 a: learning rate
@@ -138,8 +132,6 @@ a : 在0~1之間
 
 shrink a as k becomes larger
 
-
-
 gadient decent 是不段的迭代來產生新的sita i的，什麼時候終止呢？
 
 * sita 值趨緩或者不進步，甚至變差了
@@ -147,9 +139,9 @@ gadient decent 是不段的迭代來產生新的sita i的，什麼時候終止�
 * 我們已經到達事先定義好的數字了
 * 已經到達事先定義好的時間了
 
+#### 
 
-
-Close from solution vs Gradient decent
+#### Close from solution vs Gradient decent
 
 空間複雜度：
 
@@ -163,8 +155,6 @@ close from solution：O\(\)
 
 Gradient decent：O\(Tnd\)
 
-
-
 結論：數據大時要使用Gradient decent會更有效率
 
 有時候不一定會有Close from solution，
@@ -175,19 +165,15 @@ Gradient decent：O\(Tnd\)
 
 #### One-hot encoding
 
-如果是 categorical 資料 ，可以轉換成線性關係
+如果原本的feature 不是線性的，就可以用一些人工的方式讓feature 變成線性
 
 
 
-#### 觀察 Overfitting ，解決 Overfitting 使用 Regularization 
+#### 觀察 Overfitting ，解決 Overfitting 使用 Regularization
 
+L2-regularization \(Ridge regression\) 平方
 
-
-L2-regularization \(Ridge regression\)
-
-L1-regularization \(Lasso\)
-
-
+L1-regularization \(Lasso\) 絕對值
 
 怎麼取 landa — 做實驗 像 Cross validation
 
@@ -195,25 +181,17 @@ L1-regularization \(Lasso\)
 
 常用的是 Ridge and Lasso
 
-
-
 On Regularization 的 Ridge, Lasso and Elastic-net時機
 
 * Ridge : Good if many features have small /mediun sized effects
 * Lasso：Good if only a few features with a medium/large effects，容易讓 sita 變成0，相當於沒有作用
 * Elastic-net 介於上面兩者之間
 
-
-
 解釋 Ridge 和 Lasso 查別，為什麼Lasso 會讓 sita 變成0
-
-
 
 Stochastic gradient descent \(SGD\)
 
 一筆筆拿出來算，每次都更新 sita 值
-
-
 
 #### GD vs SGD
 
@@ -229,8 +207,6 @@ GD: look throught all the training instances
 
 SGD: look only one training instance
 
-
-
 #### SGD 的優缺點：
 
 優點：
@@ -245,11 +221,7 @@ SGD: look only one training instance
 
 當我們在到達最低點時，可能會在附近跳動
 
-
-
 #### Mini-batch gradient descent ： 一次選一些資料決定GD
-
-
 
 #### GD vs SGC vs mini-batch GD
 
@@ -259,13 +231,49 @@ SGC：看一筆資料更新一次
 
 mini-batch GD：看b次資料更新一次
 
-
-
-
-
 sun of scroll
 
 super of **squared**
 
 hyper parameter 操參數\(人工給定的參數\)
+
+
+
+Convex function
+
+
+
+### 評估成效 
+
+#### Mean Square Error\(MSE\)
+
+相式方法：Root Mean Squared Error \(RMSE\)
+
+批評： not a normalized measur , 容易受極端值影響
+
+
+
+#### Mean Absolute Error \(MAE\)
+
+受極端值影響
+
+#### Media Absolute Error \(MedAE\)
+
+比較不受極端值影響
+
+
+
+#### R2 score 
+
+分數為1，效果很好，理想值
+
+分數為0，效果像 Mean Model
+
+分數為-1，model 效果很差
+
+
+
+
+
+
 
