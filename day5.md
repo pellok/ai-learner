@@ -53,8 +53,6 @@ Target variable : 目的變數 output y
 
 * Classifier f\(x\) 可以是線性\(linear\)或非線性\(non-linear\)
 
-
-
 linear or non-linear
 
 有名的分類模組
@@ -63,6 +61,53 @@ linear or non-linear
 * Decision Tree\(DT\)
 * Logistic regression
 * Support Vector Machine\(SVM\)
+
+
+
+#### Regression 回歸
+
+* supervised learning task
+* 訓練和預測是回歸問題
+
+
+
+#### Over-fitting\(過度分類\) vs under-fitting\(輕度分類\)
+
+
+
+小考：
+
+Q:explain the difference between a supervised and unsupervised algorithm
+
+A: 
+
+supervised給的每筆資料中飽含 feature and target variable
+
+unsupervised給的每筆資料中只有 feature 沒有 target variable
+
+
+
+Q: Explain the difference between classification and regression
+
+A:
+
+兩個都是 supervised 每筆資料包含 feature and target variable
+
+classification的target variable 型態是 categron variable
+
+regression的target variable 型態是 real number
+
+
+
+Q: Classify the normal mails and the junk mail based on the labeled datasets，Supervised or unsupervised? 
+
+A: supervised
+
+Q: Predicting the price of stock? Classification or regression
+
+A: regression
+
+
 
 
 
