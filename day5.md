@@ -4,13 +4,11 @@
 
 投影片 PDF:[講義一](https://drive.google.com/file/d/1R8GfHT2YYPFM3m2s41vjuEf0FB-eumgt/view)、[講義二](https://drive.google.com/file/d/1JIVR4OvTNxP4v2pVDRk1Qe9vN7aHlmbk/view)
 
-
-
 機器學系概論
 
 Traditional algorithm vs machine learning
 
-Types of Machine Learning
+#### Types of Machine Learning
 
 Supervised Learning\(監督是學習\)\(最多討論、最成熟\)
 
@@ -20,25 +18,24 @@ Semi-supervised Learning
 
 Reinforcement Learning
 
-
-
 Supervised Learning
 
 * 給一組&lt;input , output&gt; 資料
 * 給公司資料，給賺錢資料，預設明年是否賺錢
 
-輸出類別：
+#### 輸出類別：
 
 * Categorical: classification problem
 
-        ordinal outputs: small, mediun, large
+  ```
+    ordinal outputs: small, mediun, large
 
-         Non-ordinal outputs: blue,green, orange
+    Non-ordinal outputs: blue,green, orange
+  ```
 
 * Real values:regression problen
+
 * Other types
-
-
 
 Traning data: 訓練資料
 
@@ -48,15 +45,24 @@ Features: 特徵 input x
 
 Target variable : 目的變數 output y
 
+#### Classification 分類問題
+
+* supervised learning task
+* Goal: 給一個特徵 x ，預測c 是什麼類別 give a feature vector x, predicts which class in c may be associated with x
+* if \|c\| = -&gt; Binary Classification, if \|c\| &gt;2 -&gt; Multi-class Classification
+
+* Classifier f\(x\) 可以是線性\(linear\)或非線性\(non-linear\)
 
 
-Classification 分類問題
 
+linear or non-linear
 
+有名的分類模組
 
-
-
-
+* k-nearest neighbor\(kNN\)
+* Decision Tree\(DT\)
+* Logistic regression
+* Support Vector Machine\(SVM\)
 
 
 
