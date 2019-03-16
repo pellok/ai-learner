@@ -6,6 +6,56 @@
 
 
 
+機器學系概論
+
+Traditional algorithm vs machine learning
+
+Types of Machine Learning
+
+Supervised Learning\(監督是學習\)\(最多討論、最成熟\)
+
+Unsupervised Learning\(非監督是學習\)
+
+Semi-supervised Learning
+
+Reinforcement Learning
+
+
+
+Supervised Learning
+
+* 給一組&lt;input , output&gt; 資料
+* 給公司資料，給賺錢資料，預設明年是否賺錢
+
+輸出類別：
+
+* Categorical: classification problem
+
+        ordinal outputs: small, mediun, large
+
+         Non-ordinal outputs: blue,green, orange
+
+* Real values:regression problen
+* Other types
+
+
+
+Traning data: 訓練資料
+
+Test Data: 測試資料
+
+Features: 特徵 input x
+
+Target variable : 目的變數 output y
+
+
+
+Classification 分類問題
+
+
+
+
+
 
 
 
