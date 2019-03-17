@@ -14,3 +14,26 @@ step 5：結果呈現
 
 scikit-learn 囊括 step1~step4 的工具
 
+
+
+#### [Scikit-Learn](https://scikit-learn.org/stable/)
+
+#### [sklearn.datasets：Datasets](https://scikit-learn.org/stable/modules/classes.html#module-sklearn.datasets)
+
+
+
+| Classes | 10  \#10種不同類別去做辨識 |
+| :--- | :--- |
+| Samples per class | ~180 |
+| Samples total | 1797 \# 總共1794筆資料 |
+| Dimensionality | 64  \#每筆資料64維度 |
+| Features | integers 0-16 |
+
+
+
+
+
+
+
+
+
