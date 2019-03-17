@@ -71,7 +71,7 @@ linear or non-linear
 
 小考：
 
-Q:explain the difference between a supervised and unsupervised algorithm
+#### Q:Explain the difference between a supervised and unsupervised algorithm
 
 A:
 
@@ -79,21 +79,21 @@ supervised給的每筆資料中飽含 feature and target variable
 
 unsupervised給的每筆資料中只有 feature 沒有 target variable
 
-Q: Explain the difference between classification and regression
+#### Q: Explain the difference between classification and regression
 
 A:
 
 兩個都是 supervised 每筆資料包含 feature and target variable
 
-classification的target variable 型態是 categron variable
+classification的target variable 型態是 categorical variable
 
 regression的target variable 型態是 real number
 
-Q: Classify the normal mails and the junk mail based on the labeled datasets，Supervised or unsupervised?
+#### Q: Classify the normal mails and the junk mail based on the labeled datasets，Supervised or unsupervised?
 
 A: supervised
 
-Q: Predicting the price of stock? Classification or regression
+#### Q: Predicting the price of stock? Classification or regression
 
 A: regression
 
@@ -104,7 +104,7 @@ Notions
 * Features x
 * Target y
 * Prediction y^
-* Parameter  sita
+* Parameter  theta
 
 ## Linear regression 線性回歸
 
@@ -116,11 +116,19 @@ sita0 =
 
 objective function
 
-#### 兩個 feature x1, x2
+#### 多項式回歸 – more dimensions
 
-y = sita0 + sita1 x + sita2 x平方
+y-hat = theta0 + theta1\*x + theta2\*x\*x + theta3\*x\*x\*x ...thetan\*xn=theta的T次方xi
 
-#### 多個 Feature x1,x2...,xn: multiple linear regression
+* xi = \[1,xi1,xi2...xid\]T
+
+* theta=\[theta0, theta1, theta2...thetad\]
+
+* d: of the features
+
+#### 多元回歸 – more features
+
+#### Feature x1,x2...,xn: multiple linear regression
 
 Close from solution
 
@@ -163,7 +171,11 @@ Gradient decent：O\(Tnd\)
 
 #### One-hot encoding
 
-如果原本的feature 不是線性的，就可以用一些人工的方式讓feature 變成線性
+轉換分類資料到不同欄位
+
+
+
+
 
 #### 觀察 Overfitting ，解決 Overfitting 使用 Regularization
 
@@ -259,13 +271,7 @@ Convex function
 
 分數為-1，model 效果很差
 
-
-
-
-
 # 實作
-
-
 
 ### Scikit-learn 介紹與實作
 
@@ -279,23 +285,5 @@ step 4：分析結果及修正模型
 
 step 5：結果呈現
 
-
-
 scikit-learn 囊括 step1~step4 的工具
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
