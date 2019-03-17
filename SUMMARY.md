@@ -6,6 +6,7 @@
 * [Day3](day3.md)
 * [Day4](day4.md)
 * [Day5](day5.md)
+* [day5-excise](day5-excise.md)
 
 ## Python 資料處理及探索分析
 
