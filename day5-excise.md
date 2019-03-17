@@ -14,13 +14,11 @@ step 5：結果呈現
 
 scikit-learn 囊括 step1~step4 的工具
 
-
-
 #### [Scikit-Learn](https://scikit-learn.org/stable/)
 
 #### [sklearn.datasets：Datasets](https://scikit-learn.org/stable/modules/classes.html#module-sklearn.datasets)
 
-
+[手寫辨識 load\_digits](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html#sklearn.datasets.load_digits)
 
 | Classes | 10  \#10種不同類別去做辨識 |
 | :--- | :--- |
@@ -31,9 +29,16 @@ scikit-learn 囊括 step1~step4 的工具
 
 
 
+[鳶尾花 load iris](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html#sklearn.datasets.load_iris)
 
 
 
+| Classes | 3 \# 3總不同總不同 |
+| :--- | :--- |
+| Samples per class | 50 |
+| Samples total | 150 |
+| Dimensionality | 4 |
+| Features | real, positive |
 
 
 
