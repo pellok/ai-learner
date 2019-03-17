@@ -173,10 +173,6 @@ Gradient decent：O\(Tnd\)
 
 轉換分類資料到不同欄位
 
-
-
-
-
 #### 觀察 Overfitting ，解決 Overfitting 使用 Regularization
 
 L2-regularization \(Ridge regression\) 平方
@@ -271,19 +267,7 @@ Convex function
 
 分數為-1，model 效果很差
 
-# 實作
+# 
 
-### Scikit-learn 介紹與實作
 
-step 1 ：定義問題
-
-step 2：蒐集、清理資料
-
-step 3 ：選擇及建立模型
-
-step 4：分析結果及修正模型
-
-step 5：結果呈現
-
-scikit-learn 囊括 step1~step4 的工具
 
