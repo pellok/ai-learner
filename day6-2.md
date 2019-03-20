@@ -48,21 +48,118 @@ Minimize f\(x\) subject to gi\(x\) &lt;= 0 \(i=1,2 ..,p\) and hj\(x\) = 0\(j=1,.
 
 Lagrangian
 
-
-
 #### [Kernel SVM](https://www.youtube.com/watch?v=yK6YARYBzW0)
 
 Map feature to higher deminsional
 
 Higher dimensional \(could be infinite\) featue space
 
-Example 
+Example
 
 2D features \(x1, x2\)
 
 x3 = x1 power of 2  + x2 power of 2
 
 2D to 3D
+
+
+
+Generalized Lagrangian and SVM
+
+Solve SVM by Lagrangian
+
+High dimensional map example
+
+#### Kernel trick example
+
+減少運算量
+
+Popular Kernels
+
+* Linear kernel
+* Polynomial kernel
+* Gaussian \(RBF\) kernel
+
+
+
+Characteristics of the solution
+
+
+
+Complementary Slackness 
+
+support vectors
+
+
+
+#### Standard SVM
+
+
+
+#### Summary
+
+
+
+#### Regularized linear regression
+
+
+
+Regularized linear classification
+
+loss function
+
+* Loss
+* Hinge Loss
+* Logistic Loss
+* Squared Hing Loss
+
+Regularized linear classification with kernel
+
+Logistic regression vs SVM
+
+
+
+Linear or kernel ? SVM or Logistic Regression ?
+
+kernel Logistic Regression
+
+
+
+Regularized linear regression
+
+
+
+Loss function for regression
+
+L1 loss:
+
+L2 loss:
+
+
+
+Regularized regression with kernel
+
+
+
+Summary
+
+SVM
+
+LR
+
+Linear regression and support vector regression are also under the same umbrella
+
+Understanding the concept of training loss and regularization enables you to self-study many machine learning techniques
+
+
+
+
+
+
+
+
+
+
 
 
 
