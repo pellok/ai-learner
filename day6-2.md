@@ -8,31 +8,17 @@
 
 [資料與程式碼](https://drive.google.com/drive/folders/1RRX1YEI33jxDl-s7h67K1sVrTDdudjhM)
 
-
-
 ## [Suport vector machines SVM](https://www.youtube.com/watch?v=UrC5qzU0FMA)
-
-
 
 #### Linear SVM
 
-
-
 Margin distance
-
-
 
 Maximum margin
 
-
-
 Soft margin and slack variable
 
-
-
 #### [Lagrange multiplier and KKT condition](https://www.youtube.com/watch?v=MAjskeeDBpc)
-
-
 
 Lagrange multiplier is a strategy for finding the extreme value of a function subject to equality constraints.
 
@@ -48,9 +34,7 @@ ylambda = f\(x\) + lanbda1g1\(x\) + lanbda2g2\(x\) + lanbda m gm \(x\)
 
 lambda i 's are called "Lagrange multipliers"
 
-
-
-#### Generalized Lagrange multiplier
+#### Generalized Lagrange multiplier \(KKT\)
 
 Lagrange multipliers is generalized to include the inequality constraints under the Karush-Kuhn-Tucker
 
@@ -63,6 +47,22 @@ Standard form problem
 Minimize f\(x\) subject to gi\(x\) &lt;= 0 \(i=1,2 ..,p\) and hj\(x\) = 0\(j=1,..,m\)
 
 Lagrangian
+
+
+
+#### [Kernel SVM](https://www.youtube.com/watch?v=yK6YARYBzW0)
+
+Map feature to higher deminsional
+
+Higher dimensional \(could be infinite\) featue space
+
+Example 
+
+2D features \(x1, x2\)
+
+x3 = x1 power of 2  + x2 power of 2
+
+2D to 3D
 
 
 
