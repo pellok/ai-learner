@@ -10,6 +10,65 @@
 
 
 
+#### [KNN - K-nearest neightbors](https://www.youtube.com/watch?v=0RIJUK0il2I)
+
+在一個分佈圖裡面，要預測的點的K個最接近的鄰居，
+
+計算範圍內的點都是屬於哪一個分類，就預測未知點為那個分類
+
+前處裡：Feature normalization
+
+* Scale to \[0,1\]
+* Scale to \[-1,1\]
+* Normalized to N\(0,1\)
+
+
+
+#### [Overfitting and underfitting in KNN](https://www.youtube.com/watch?v=ryjdPBrGFsM)
+
+
+
+How to select K
+
+overfitting and underfitting 的現象
+
+K vs train error vs test errror
+
+K越來越小，K=1 不會有 traning error，但是會有很高的testing error，
+
+這時候就是overfitting 的時候
+
+
+
+KNN \(K Nearest Neighbor\)
+
+* K個最近的鄰居
+
+* 近朱者赤;近墨者黑 ○ 孟母三遷
+
+* You are the average of the five people you spend the most time with.
+
+
+
+KNN 優缺點
+
+ ● 優點
+
+* 訓練速度快
+
+* 不用對模型進行泛化
+
+* 也可以做regression
+
+● 缺點
+
+* 預測時速度慢，且佔用很大的記憶體空間
+
+* 需要對feature normalize
+* 不適合用在高維度資料
+
+
+
 
 
 
