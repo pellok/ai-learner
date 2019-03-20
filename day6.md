@@ -58,11 +58,9 @@ KNN 優缺點
 
 * 不適合用在高維度資料
 
-
-
 ## [Logical Regression](https://www.youtube.com/watch?v=cZ-lAVT80KE)
 
-classification by linear regression 
+classification by linear regression
 
 Linear regress is highly influenced by the extreme values
 
@@ -76,16 +74,13 @@ Logical function vs Hyperbolic tangent function\(a.k.a tanh function\)
 
 Logistic vs tanh function
 
-
-
 Logistic Regression
 
 * Define f\(x\) = y-hat = 1/\(1+e power of -\(theta0 + theta1\*x\)\) = 1/\(1+ e power of\(theta transfer\)\*x\)
 
 * 找出好的 theta0 and theta1 使得 y-hat\(預測\) 無限接近 yi\(真實\)
+
 * Loss function: cross entropy loss
-
-
 
 #### [grandent ascent](https://www.youtube.com/watch?v=RHX62jeV5jg)
 
@@ -97,7 +92,7 @@ p\(y=0\) = 1- f\(x\)
 
 P\(y\) = f\(x\) power of y \(1- f\(x\)\)power of 1-y
 
-L\(theta\) = 
+L\(theta\) =
 
 Likelihood and log like
 
@@ -106,20 +101,20 @@ Likelihood and log like
 1. 相加比相乘快
 2. 小數相乘會有underflow精確度問題，相加不會變成零
 
-
-
 How to find theta?
 
 * Method 1: 沒有 closed form solution
 * Method 2: grandient descent 找出目標函數的最小值，
 
-       我們要找出最大值所以使用 -l\(theta\)
+  ```
+   我們要找出最大值所以使用 -l\(theta\)
+  ```
 
 * Method 3: gradient ascent 找出目標函數的最大化值
 
-       l\(theta\) is a convave\(反過來的碗公\) function
-
-       
+  ```
+   l\(theta\) is a convave\(反過來的碗公\) function
+  ```
 
 #### Gradient ascent
 
@@ -129,13 +124,9 @@ g\(x\) = 1/ 1+e power of -x = \(1 + e power of -x \) power of -1
 
 g‘\(x\) = g\(x\)\(1-g\(x\)\)
 
-
-
 #### Derivation of the log likeilood function
 
 l\(theta\) = ∑{ Xij\(y - y-hat\)}
-
-
 
 #### Cross entropy and log-likelihood of classifition problem
 
@@ -149,9 +140,7 @@ theta = argmmin\( - ∑{ yilog\(yi-hat\) + \(1-yi\)log\(1-yi-hat\) }\)
 
 #### log-likelihood 最大 = 負的log-likelihood\(這就是cross entropy loss\) 最小
 
-
-
-#### Regularization to avoid overfitting 
+#### Regularization to avoid overfitting
 
 new goal:
 
@@ -159,13 +148,9 @@ theta := argmax\[ ∑{ yilog\(yi-hat\) + \(1-yi\)log\(1-yi-hat\) - sita/2\|\|the
 
 penalize high weigth , like we did in linear regression!
 
-
-
 Derivative of l\(theta\)
 
-
-
-#### Stochastic gradient descent 
+#### Stochastic gradient descent
 
 相似的我們可以使用 GD、SGD、mini-batch GD來解logistic regression
 
@@ -179,6 +164,27 @@ P\(y=c\) = e power of thetac power of T \* x/ ∑ e power of thetac power t \*x
 
 
 
+#### [Evalation 評估 ](https://www.youtube.com/watch?time_continue=1&v=ITX-NsE01Aw)
+
+Accuracy\(y, y-hat\) = 1/n ∑ I \(yi=yi-hat\)，無法單看Accuracy
+
+Confusion matrix
+
+Precision\(y, y-hat\) = I\(yi=yi-hat=1\)/I\(yi-hat\) = TP/\(TP+TN\) 常用在搜尋引擎
+
+Recall\(y,y-hat\) = I\(yi=yi-hat=1\)/I\(yi\) = TP/TP+FN 常用醫療癌症篩檢
+
+Precision and recall tradeoff 互相排斥
+
+F1-score
+
+F1\(y, y-hat\)=1/ \(1/p + 1/r\)
+
+ROC curve and AUC
+
+Precision, recalls\(TPRs\), and FPRs of different thresholds
+
+AUC 1.0 最好的狀況
 
 
 
@@ -187,7 +193,6 @@ P\(y=c\) = e power of thetac power of T \* x/ ∑ e power of thetac power t \*x
 
 
 
-       
 
 
 
