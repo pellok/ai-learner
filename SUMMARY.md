@@ -8,6 +8,7 @@
 * [Day5](day5.md)
 * [day5-exercise](day5-exercise.md)
 * [day6](day6.md)
+* [Day6-2](day6-2.md)
 
 ## Python 資料處理及探索分析
 
