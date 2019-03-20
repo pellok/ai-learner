@@ -162,9 +162,7 @@ Multiple classes\(1,2,...,C\) : softmax function
 
 P\(y=c\) = e power of thetac power of T \* x/ ∑ e power of thetac power t \*x
 
-
-
-#### [Evalation 評估 ](https://www.youtube.com/watch?time_continue=1&v=ITX-NsE01Aw)
+#### [Evaluation 評估 ](https://www.youtube.com/watch?time_continue=1&v=ITX-NsE01Aw)
 
 Accuracy\(y, y-hat\) = 1/n ∑ I \(yi=yi-hat\)，無法單看Accuracy
 
@@ -182,17 +180,7 @@ F1\(y, y-hat\)=1/ \(1/p + 1/r\)
 
 ROC curve and AUC
 
-Precision, recalls\(TPRs\), and FPRs of different thresholds
+Precision, recalls\(TPRs\), and \(FPRs\) of different thresholds
 
 AUC 1.0 最好的狀況
-
-
-
-
-
-
-
-
-
-
 
