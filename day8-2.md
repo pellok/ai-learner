@@ -99,19 +99,17 @@ Divisive \(top-down\) 依靠 K-means
 
 ##### Agglomerative example
 
-
-
 #### 階層式分析
 
 * 不需指定分群的數量
 
-1. 每筆資料視為獨立一群
+* 每筆資料視為獨立一群
 
-2. 計算每兩群之間的距離
+* 計算每兩群之間的距離
 
-3. 將最近的兩群合併成一群
+* 將最近的兩群合併成一群
 
-4. 重複 2,3 直到所有資料合併為同一群為止
+* 重複 2,3 直到所有資料合併為同一群為止
 
 * 計算距離的方式有
 
@@ -123,13 +121,15 @@ Divisive \(top-down\) 依靠 K-means
 
 [ 利用 SciPy 实现层次聚类](https://haojunsui.github.io/2016/07/16/scipy-hac/)
 
-
-
 #### Clustering vs classification
 
 Clustering: unsupervisor learning algorithm
 
 Classification：supervisor learning algorithm
 
-Chapter 10 總結 \(Summary\)
+
+
+## Chapter 10 總結 \(Summary\)
+
+
 
