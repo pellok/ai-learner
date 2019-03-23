@@ -40,15 +40,15 @@ variance 盡量大，因為讓降維後的資料不要重疊在一起．還可�
 
 * PCA 透過計算 eigen-value, eigen-vector，可以將原本的features 降維至特定的維度
 
-        - 原本 Data 有 100 個 features，透過 PCA，可以將這 100 個features 降成 2 個 feautres
+  * 原本 Data 有 100 個 features，透過 PCA，可以將這 100 個features 降成 2 個 feautres
 
-        - 新 features 為舊 features 的線性組合
-
-
+  * 新 features 為舊 features 的線性組合
 
 簡單可解釋性比較高
 
 有新的點可以直接投影下去
+
+[PCA\(主成分分析\)](https://www.jianshu.com/p/4528aaa6dc48)
 
 ##### [T-distributed Stochastic Neighbot Embedding T-SNE](https://www.youtube.com/watch?v=IMqKFq7Yj3o)
 
@@ -81,15 +81,11 @@ cosin distance
 5. 重複第三步，因為群中心已經變過了
 6. 直到收斂，群中心不在變更
 
-
-
 #### K-means for segmentation
-
-
 
 #### Hierarchical clustering \(Cluster Dendrogram\)
 
-Agglomerative \(bottom-up\) 
+Agglomerative \(bottom-up\)
 
 • Start with each data point as a cluster
 
@@ -101,9 +97,31 @@ Divisive \(top-down\) 依靠 K-means
 
 • Each step split a cluster until each cluster contains one data point
 
-
-
 ##### Agglomerative example
+
+
+
+#### 階層式分析
+
+* 不需指定分群的數量
+
+1. 每筆資料視為獨立一群
+
+2. 計算每兩群之間的距離
+
+3. 將最近的兩群合併成一群
+
+4. 重複 2,3 直到所有資料合併為同一群為止
+
+* 計算距離的方式有
+
+○ 'complete': cluster 中，最遠兩點的距離
+
+○ 'single': cluster 中，最近兩點的距離
+
+○ 'average': cluster 中，所有點的距離平均
+
+[ 利用 SciPy 实现层次聚类](https://haojunsui.github.io/2016/07/16/scipy-hac/)
 
 
 
@@ -112,12 +130,6 @@ Divisive \(top-down\) 依靠 K-means
 Clustering: unsupervisor learning algorithm
 
 Classification：supervisor learning algorithm
-
-
-
-
-
-
 
 Chapter 10 總結 \(Summary\)
 
