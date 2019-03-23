@@ -40,6 +40,10 @@ Bootstrap aggregating：
 
 使用 bagging + randomized feature set
 
+[Random Forests - The Math of Intelligence \(Week 6\)](https://www.youtube.com/watch?v=QHOazyP-YlM) 線上教學 Random forest python 程式教學
+
+
+
 #### [adaboost：Adaptive Boosting](https://www.youtube.com/watch?v=G5sSqvOr7QA)
 
 Boosting ：
@@ -50,17 +54,39 @@ Assign different weight to different samples
 
 EXP
 
-##### Gradient boosting：adaboosting 的延伸
+##### Gradient boosting machine \(GBM\) 梯度提身機
+
+##### adaboosting 的延伸
+
+[GBM介紹](https://docs.google.com/presentation/d/12rnECA-on7yaGl9T8d9nVZP4nFuG16fkXRDlKaY0fBw/preview?slide=id.p48)
+
+[intro to gradient boosting](https://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorithm-machine-learning/)
 
 
 
-#### Stacking 
+XGBoost \(eXtreme Gradient Boosting\)：終極大殺器
+
+XGBoost is an implementation of gradient boosted machine but add some features
+
+XGBoost vs GBM
+
+Earlystop in XGBoost
+
+[Kaggle Winning Solution Xgboost Algorithm - Learn from Its Author, Tong He ](https://www.youtube.com/watch?time_continue=7&v=ufHo8vbk6g4)
+
+[○ XGBoost 詳解 - 中文](https://medium.com/jameslearningnote/%E8%B3%87%E6%96%99%E5%88%86%E6%9E%90-%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92-%E7%AC%AC5-2%E8%AC%9B-kaggle%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E7%AB%B6%E8%B3%BD%E7%A5%9E%E5%99%A8xgboost%E4%BB%8B%E7%B4%B9-1c8f55cffcc)
+
+[○ XGBoost parameter tuning - 英文](https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/)
+
+[○ slides from XGBoost author - 英文](https://homes.cs.washington.edu/~tqchen/pdf/BoostedTree.pdf)
+
+#### Stacking
 
 
 
 
 
-[Random Forests - The Math of Intelligence \(Week 6\)](https://www.youtube.com/watch?v=QHOazyP-YlM) 線上教學 Random forest python 程式教學
+## Practical concerns
 
 
 
