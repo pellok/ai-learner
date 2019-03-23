@@ -42,8 +42,6 @@ Bootstrap aggregating：
 
 [Random Forests - The Math of Intelligence \(Week 6\)](https://www.youtube.com/watch?v=QHOazyP-YlM) 線上教學 Random forest python 程式教學
 
-
-
 #### [adaboost：Adaptive Boosting](https://www.youtube.com/watch?v=G5sSqvOr7QA)
 
 Boosting ：
@@ -62,8 +60,6 @@ EXP
 
 [intro to gradient boosting](https://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorithm-machine-learning/)
 
-
-
 XGBoost \(eXtreme Gradient Boosting\)：終極大殺器
 
 XGBoost is an implementation of gradient boosted machine but add some features
@@ -74,7 +70,7 @@ Earlystop in XGBoost
 
 [Kaggle Winning Solution Xgboost Algorithm - Learn from Its Author, Tong He ](https://www.youtube.com/watch?time_continue=7&v=ufHo8vbk6g4)
 
-[○ XGBoost 詳解 - 中文](https://medium.com/jameslearningnote/%E8%B3%87%E6%96%99%E5%88%86%E6%9E%90-%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92-%E7%AC%AC5-2%E8%AC%9B-kaggle%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E7%AB%B6%E8%B3%BD%E7%A5%9E%E5%99%A8xgboost%E4%BB%8B%E7%B4%B9-1c8f55cffcc)
+[○ XGBoost 詳解 - 中文](https://medium.com/jameslearningnote/資料分析-機器學習-第5-2講-kaggle機器學習競賽神器xgboost介紹-1c8f55cffcc)
 
 [○ XGBoost parameter tuning - 英文](https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/)
 
@@ -82,11 +78,96 @@ Earlystop in XGBoost
 
 #### Stacking
 
+## Practical concerns 實際問題
+
+### Data Preproc
+
+##### 
+
+##### Consider Transforming features
+
+* Min-Max scaling：線性範圍轉會到 range \[-1,1\] or \[0,1\]
+* Standardize：scale each feature to N\(0,1\)
+* Robust scaling：是為了防止少數的極端值，讓scale 的效果不好
+* Thresholding：選定一個threshold，大於threshold 就當1，小於就當0
+* Apploying log or exponential function：
+
+##### Why scaling ?
+
+* For KNN, scaling prevents the distances scores being dominated by few features
+
+* For linear regression, logistic regression, SVM, scaling helps the optimization
+
+* For descision tree and random forest, scaling or not is not important
 
 
 
+##### Why log or expoential ?
 
-## Practical concerns
+
+
+##### Missing values 缺值
+
+if type of the feature is categorical
+
+* replace the missing values with the most frequent value
+
+if type of the features is numerical
+
+* replace the missing values with the mean or median
+
+some more adveanced techniques
+
+* predict the missing values , usually by interprolation and extrapolation
+
+
+
+##### Imbalanced classification 
+
+##### 正樣本和副樣本比例懸殊很大
+
+common techniques for imbalanced dataset:
+
+* Under-sample the majority class 數量比較多的那一類 取一部份smaple出來
+* Over-sample the majority class 數量比較少的 sample 重複一些樣本
+
+       在數量少的那一類隨機抽出一個樣本，再放回去，讓數量變多
+
+* 混用上面兩種
+
+
+
+#### Selecting hyper-parameters 如何選擇參數
+
+Example of the hyper-parameters
+
+* K in KNN
+
+* C in the regulatized linear classification
+
+* Step size in gradient descent
+
+Strategies
+
+* Grid search：列出 hpyer-parameter 的可能值，試過所有排列組合
+* Random search：隨機挑選 hyper-parameter 的組合，重複n幾次
+* Bayesian optimization：我們先嘗試一組，依據結果在好壞，來挑選附近或其他不同的
+
+
+
+Random search 可能會比 Grid search 好
+
+##### 衡量選得好不好
+
+把data 分成三個部分 Training / validation / test datasets
+
+使用training data 搭配不同的 hyper-parameter 訓練很多組 model
+
+使用 validation data 來評估好的 hyper-paramenter 的model效果好
+
+在使用好的hyper-parameter 和資料 \(Training+validation\) 來訓練新model
+
+Testing data 來測試新的model 得到Acuuray
 
 
 
