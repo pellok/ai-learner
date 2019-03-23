@@ -161,8 +161,6 @@ Random search 可能會比 Grid search 好
 
 Testing data 來測試新的model 得到Acuuray
 
-
-
 #### Multi-class classification 多元分類
 
 Some models can handle multi-class：
@@ -177,8 +175,6 @@ Leaverage on binary classifiers
 
 * One-vs.-rest
 * One-vs.-one
-
-
 
 ##### One-vs.-rest
 
@@ -196,13 +192,11 @@ f3：is "gree" or not "gree"
 
 y-hat = arg max fk\(xi\) 看f1,f2,f3, 拿一個分數比較高，就選最高分當作我們的預測
 
-
-
 ##### One-vs.-one
 
 Training：for a k-nary classification problem, one trains C\(K,2\) classisfiers
 
-如果要訓練 Target labels: "red", "blue", "gree" 
+如果要訓練 Target labels: "red", "blue", "gree"
 
 f1：is "red" or "blue"
 
@@ -210,13 +204,45 @@ f2：is "red" or "gree"
 
 f3：is  "blue" or "gree"
 
-
-
 #### Model selection
 
 ##### 
 
 ##### Bias vs variance
+
+The test error comes from 錯誤來原
+
+* Bias：f\(x\) 到假說空間之間的距離，如果模型的假說空間不包含 f\(x\) ，預測不會準
+* Variance：我們的data取樣有所偏差，所以模型沒有辦法學習完整的資料，所以會造成誤差
+* Noise：人為錯誤
+
+
+
+Model complexity vs error
+
+
+
+Training size vs error
+
+
+
+Data size vs model complexity
+
+資料大小和模組完整
+
+
+
+SOP
+
+
+
+Model selection summary
+
+* Domain knowledge important
+* Model complexity is important
+* Data size is important
+
+
 
 
 
