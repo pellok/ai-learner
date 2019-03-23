@@ -100,11 +100,7 @@ Earlystop in XGBoost
 
 * For descision tree and random forest, scaling or not is not important
 
-
-
 ##### Why log or expoential ?
-
-
 
 ##### Missing values 缺值
 
@@ -120,9 +116,7 @@ some more adveanced techniques
 
 * predict the missing values , usually by interprolation and extrapolation
 
-
-
-##### Imbalanced classification 
+##### Imbalanced classification
 
 ##### 正樣本和副樣本比例懸殊很大
 
@@ -131,11 +125,11 @@ common techniques for imbalanced dataset:
 * Under-sample the majority class 數量比較多的那一類 取一部份smaple出來
 * Over-sample the majority class 數量比較少的 sample 重複一些樣本
 
-       在數量少的那一類隨機抽出一個樣本，再放回去，讓數量變多
+  ```
+   在數量少的那一類隨機抽出一個樣本，再放回去，讓數量變多
+  ```
 
 * 混用上面兩種
-
-
 
 #### Selecting hyper-parameters 如何選擇參數
 
@@ -153,8 +147,6 @@ Strategies
 * Random search：隨機挑選 hyper-parameter 的組合，重複n幾次
 * Bayesian optimization：我們先嘗試一組，依據結果在好壞，來挑選附近或其他不同的
 
-
-
 Random search 可能會比 Grid search 好
 
 ##### 衡量選得好不好
@@ -170,6 +162,61 @@ Random search 可能會比 Grid search 好
 Testing data 來測試新的model 得到Acuuray
 
 
+
+#### Multi-class classification 多元分類
+
+Some models can handle multi-class：
+
+* KNN
+
+* Decision trees
+
+* Neural networks
+
+Leaverage on binary classifiers
+
+* One-vs.-rest
+* One-vs.-one
+
+
+
+##### One-vs.-rest
+
+Train a single classifier for each class
+
+如果要訓練 Target labels: "red", "blue", "gree"
+
+分別訓練：
+
+f1：is"red" or not "red"
+
+f2：is "blue" or not "blue"
+
+f3：is "gree" or not "gree"
+
+y-hat = arg max fk\(xi\) 看f1,f2,f3, 拿一個分數比較高，就選最高分當作我們的預測
+
+
+
+##### One-vs.-one
+
+Training：for a k-nary classification problem, one trains C\(K,2\) classisfiers
+
+如果要訓練 Target labels: "red", "blue", "gree" 
+
+f1：is "red" or "blue"
+
+f2：is "red" or "gree"
+
+f3：is  "blue" or "gree"
+
+
+
+#### Model selection
+
+##### 
+
+##### Bias vs variance
 
 
 
