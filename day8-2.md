@@ -1,7 +1,5 @@
 # 機器學習基礎與演算法
 
-
-
 [講師投影片Chapter9 ](https://drive.google.com/file/d/1QBUdp_e2OhK0WzaoL-4ZKzlTE9-mMNYg/view)
 
 [講師投影片Chapter10 ](https://drive.google.com/file/d/1vjasef779W2oSD6yQSGBNiS7G3UOiT2a/view)
@@ -10,13 +8,11 @@
 
 [課程投影片](https://drive.google.com/file/d/1CxXQhzkyvlkAyZ7u1hHK3TNHznRqYXa-/view)
 
-
-
-## 非監督式學習 \(Unsupervised Learning\) 
+## 非監督式學習 \(Unsupervised Learning\)
 
 1. 只給 Feature x ，從中找到最具代表性的 Feature \(Dimension reduction\)
 
-   2. 只給 Featurex ，從中判斷類別 \(Clustering\)
+   1. 只給 Featurex ，從中判斷類別 \(Clustering\)
 
 ##### Dimension reduction
 
@@ -30,11 +26,7 @@
 
 • Hierarchical clustering
 
-
-
 #### [Dimension reduction ](https://www.youtube.com/watch?v=eC5DzAzUbPQ)降低為度
-
-
 
 ##### Pricipal component analysis \(PCA\)
 
@@ -44,27 +36,33 @@
 
 variance 盡量大，因為讓降維後的資料不要重疊在一起．還可以保持分布狀態
 
+* 實務上我們經常遇到資料有非常多的 features，有些 features 可能高度相關，有什麼方法能夠把高度相關的 features 去除?
+
+* PCA 透過計算 eigen-value, eigen-vector，可以將原本的features 降維至特定的維度
+
+        - 原本 Data 有 100 個 features，透過 PCA，可以將這 100 個features 降成 2 個 feautres
+
+        - 新 features 為舊 features 的線性組合
+
+
+
 簡單可解釋性比較高
 
 有新的點可以直接投影下去
-
-
 
 ##### [T-distributed Stochastic Neighbot Embedding T-SNE](https://www.youtube.com/watch?v=IMqKFq7Yj3o)
 
 允許 non-linear transforms
 
-算 P\(x\|x1\) = 
+算 P\(x\|x1\) =
 
 算 Q\(z\|x1\)=
 
-Goal：minimize KL-divergence of P and Q 
+Goal：minimize KL-divergence of P and Q
 
 觀察所有倆兩樣板的資料，有新的點加入的時候，不知道如果投影下去
 
-
-
-## Clustering 
+## Clustering
 
 附近的點放在一起
 
@@ -84,6 +82,36 @@ cosin distance
 6. 直到收斂，群中心不在變更
 
 
+
+#### K-means for segmentation
+
+
+
+#### Hierarchical clustering \(Cluster Dendrogram\)
+
+Agglomerative \(bottom-up\) 
+
+• Start with each data point as a cluster
+
+• Merge two closest clusters until only one cluster left
+
+Divisive \(top-down\) 依靠 K-means
+
+• Start with one cluster
+
+• Each step split a cluster until each cluster contains one data point
+
+
+
+##### Agglomerative example
+
+
+
+#### Clustering vs classification
+
+Clustering: unsupervisor learning algorithm
+
+Classification：supervisor learning algorithm
 
 
 
