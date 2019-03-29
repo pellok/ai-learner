@@ -8,6 +8,10 @@
 
 [程式碼](https://drive.google.com/drive/folders/1sH38d7elXKVpgsJCjPSOvIRa7cZDYDig)
 
+
+
+#### [簡介](https://www.youtube.com/watch?v=Bko-FyJGXlE)
+
 #### 讓機器擁有知識 - Ontology
 
 Thing - 食品 - has Food Additives - is a Name
@@ -28,19 +32,13 @@ I: Intentions 這個 agent 的能力
 
 BDI-Concept - Maper - OWL-Ontology
 
-
-
 演化是計算\(Genetic Algorithm\)
 
 你要有辦法把你的演算法的解決方案編碼成一個基因組，然後把演算法的基因組丟到環境去做測試，
 
 測試好的演算法留下來，拿去做突變，突變後在編成基因組，循環上面的步驟，直到很好的解決問題
 
-
-
 螞蟻演算法\(Ant Colony Algorithm\)
-
-
 
 #### 機器學習
 
@@ -54,8 +52,6 @@ Center-base Clustering：K-means快速
 
 Density-base Clustering：DB Screem
 
-
-
 #### 強化學習 Reinforcement Learning
 
 強化是學習不是learning from data，他是learning from evirement
@@ -68,30 +64,22 @@ Density-base Clustering：DB Screem
 
 廣義來說強化式學習也是learning from data，但是這個data是自己產生的
 
-
-
 不是所有事情都可以，像失敗很重的就不能使用，只能用在可以模擬的環境來學習
 
 像：AlphaZero、ApphaStar
 
-
-
-### 深度學習 Deep Learn
+### [深度學習 Deep Learn](https://www.youtube.com/watch?v=gYASL27Hn40)
 
 * 是一種機器學習的方法
 * 藉由模仿人類大腦神經元的結構，定義解決問題的Function
 * 原本稱為\(類\)神經網路\(Neural Network, NN\)
 * 所謂深度學習是一種具有深度\(多層\)的Neural Network
 
-
-
 ImageNet Challenge 從照片中辨認資料\(裡面是什麼東西\)
 
 人類的錯誤率是5%，傳統的是25%
 
 2015 已經可以達到3.5%，超越了人類
-
-
 
 #### 類神經網路與多層感知機 Neural Network & Multilayer Perceptron
 
@@ -101,8 +89,6 @@ y-hat = 激發函數\(w1x1,w2,x2...wnxn+b\)
 
 激發函數：也是感知函數，解決所謂的分類問題
 
-
-
 #### 線性可分/不可分 問題
 
 深度學習可以解線性不可分問題
@@ -111,13 +97,9 @@ Sigmoid Function
 
 一個神經元，就是Logistic Regression \(邏輯式回歸\)
 
-
-
 引入多重神經元 與 非線性的激發函數
 
 XOR 問題
-
-
 
 #### 多重感知機\(Multilayer Perceptron, MLP\)
 
@@ -126,7 +108,7 @@ XOR 問題
 
 輸入的資料經過一層層的神經元打散之後，分別運算最後最後預測
 
-f\(x, theta\) : 
+f\(x, theta\) :
 
 theta: weights, bias
 
@@ -144,11 +126,29 @@ Theta\* = argimin L\(theta\)
 
 
 
+#### [梯度下降與反向傳播 Gradient Descent & Backpropagation](https://www.youtube.com/watch?v=ZC66no2y_ZI)
+
+假設f只有一個參數w，如何獲取最低 Loss ？
 
 
 
+#### 梯度下降 Gradient Descent
 
 
+
+##### 反向傳播 - 連鎖率\(Chain Rule\) 與偏微分
+
+##### 連鎖率
+
+y = f\(x\), z = g\(y\) ==&gt; dz/dx = dz\*dy / dy\*dx
+
+要求z對x的微分，先做 "z對y的微分" 再乘上 "y對x的微分"
+
+##### 偏微分
+
+z = f\(x,y\)
+
+x = g\(t\), y = h\(t\)
 
 
 
