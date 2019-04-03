@@ -10,9 +10,11 @@
 
 [程式碼](https://drive.google.com/drive/folders/1sH38d7elXKVpgsJCjPSOvIRa7cZDYDig)
 
-## [梯度下降與反向傳播](https://www.youtube.com/watch?v=ZC66no2y_ZI)
+## [梯度下降與反向傳播](https://www.youtube.com/watch?v=ZC66no2y_ZI)\(Backpropagation & Gradient Descent\)
 
-假設f只有一個參數w，如何獲取最低 Loss ？
+將誤差反向由輸出層往輸入層傳遞\(Backpropagation\)，逐層獲得梯度然後藉由梯度下降\(GD\)調整神經元權重
+
+直到錯誤率最低，機器就成功學會如何辨識一隻貓了
 
 #### 梯度下降 Gradient Descent
 
