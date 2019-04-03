@@ -36,13 +36,11 @@ x = g\(t\), y = h\(t\)
 
 ∂：d 偏微分符號
 
-反向傳播
+#### 反向傳播 Notation
 
-Loss Function
+L：Loss Function\(從y-hat來的\)
 
 ∂L /∂ theta = \(∂L \* ∂y-hat / ∂y-hat \* ∂ theta\) - \(∂L \* ∂y-hat \* ∂z / ∂y-hat \* ∂z \*∂theta\)
-
-反向傳播 - Notation
 
 反向傳播 - Loss Function 平均的誤差
 
@@ -54,7 +52,9 @@ theta = argmin L\(theta\)
 
 Backword Pass
 
-Backpropagation 是為了算梯度的反方向去下降
+Backpropagation 是為了算梯度
+
+Gradient Descent 是為了調整參數
 
 #### 超參數
 
@@ -64,7 +64,9 @@ Backpropagation 是為了算梯度的反方向去下降
 
 #### Mini-batch Gradient Descent
 
-#### Mini-batch vs Epoch
+#### Mini-batch vs Epoch , Epoch 是更新一次的循環
+
+#### 
 
 #### 梯度消失問題\(Gradient Vanishing\)
 
