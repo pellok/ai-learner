@@ -88,19 +88,11 @@ Nesterov monentum
 * 在算 gradient
 * 更新
 
-
-
-
-
 ## 手刻神經網路
 
 [影片一](https://www.youtube.com/watch?v=f0NCZYDaVls)
 
 [影片二](https://www.youtube.com/watch?v=QepktWBrQ70)
-
-
-
-
 
 
 
