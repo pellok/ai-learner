@@ -146,15 +146,11 @@ x = g\(t\), y = h\(t\)
 
 ∂：d 偏微分符號
 
-
-
 反向傳播
 
-Loss Function 
+Loss Function
 
 ∂L /∂ theta = \(∂L \* ∂y-hat / ∂y-hat \* ∂ theta\) - \(∂L \* ∂y-hat \* ∂z / ∂y-hat \* ∂z \*∂theta\)
-
-
 
 反向傳播 - Notation
 
@@ -164,23 +160,15 @@ L\(theta\) = 1/ R \|\| ∑\(f\(x power of r; theta\) - y power of r \) \|\|
 
 theta = argmin L\(theta\)
 
-
-
 #### Backpropagation - 反向傳播
 
 Backword Pass
 
 Backpropagation 是為了算梯度的反方向去下降
 
-
-
-
-
 #### 超參數
 
 ##### Learning rate 控制gradient descent 走的步數
-
-
 
 #### Stochastic Gradient Descent \(隨機梯度下降法\)
 
@@ -194,37 +182,17 @@ Backpropagation 是為了算梯度的反方向去下降
 
 利用 momentun 克服梯度消失
 
-
-
 Momentun
 
 * 先算 gradient
 * 加上 monentum
 * 更新
 
-
-
 Nesterov monentum
 
 * 加上 momentum
 * 在算 gradient
 * 更新
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
