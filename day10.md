@@ -1,4 +1,4 @@
-# 深度學習導論
+# 深度學習
 
 #### Introduction to Deep Learning
 
