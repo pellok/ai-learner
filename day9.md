@@ -81,15 +81,17 @@ ImageNet Challenge 從照片中辨認資料\(裡面是什麼東西\)
 
 #### 類神經網路與多層感知機 Neural Network & Multilayer Perceptron
 
+以數學模型模擬神經元
+
 單一感知器Single perceptron \(neuron in NN\)
 
 y-hat = 激發函數\(w1x1,w2,x2...wnxn+b\)
 
 激發函數：也是感知函數，解決所謂的分類問題
 
-#### 線性可分/不可分 問題
+#### 線性可分/不可分 問題\(可不可以用一條線區分\)
 
-深度學習可以解線性不可分問題
+深度學習可以解線性不可分問題，使用非線性函數
 
 Sigmoid Function
 
@@ -122,77 +124,9 @@ theta: weights, bias
 
 Theta\* = argimin L\(theta\)
 
-#### [梯度下降與反向傳播 Gradient Descent & Backpropagation](https://www.youtube.com/watch?v=ZC66no2y_ZI)
+#### 
 
-假設f只有一個參數w，如何獲取最低 Loss ？
-
-#### 梯度下降 Gradient Descent
-
-##### 反向傳播 - 連鎖率\(Chain Rule\) 與偏微分
-
-##### 連鎖率
-
-y = f\(x\), z = g\(y\) ==&gt; dz/dx = dz\*dy / dy\*dx
-
-要求z對x的微分，先做 "z對y的微分" 再乘上 "y對x的微分"
-
-##### 偏微分
-
-z = f\(x,y\)
-
-x = g\(t\), y = h\(t\)
-
-∂z/∂t = ∂f \* ∂h / ∂h \* ∂t + ∂f \* ∂h / ∂h \* ∂t
-
-∂：d 偏微分符號
-
-反向傳播
-
-Loss Function
-
-∂L /∂ theta = \(∂L \* ∂y-hat / ∂y-hat \* ∂ theta\) - \(∂L \* ∂y-hat \* ∂z / ∂y-hat \* ∂z \*∂theta\)
-
-反向傳播 - Notation
-
-反向傳播 - Loss Function 平均的誤差
-
-L\(theta\) = 1/ R \|\| ∑\(f\(x power of r; theta\) - y power of r \) \|\|
-
-theta = argmin L\(theta\)
-
-#### Backpropagation - 反向傳播
-
-Backword Pass
-
-Backpropagation 是為了算梯度的反方向去下降
-
-#### 超參數
-
-##### Learning rate 控制gradient descent 走的步數
-
-#### Stochastic Gradient Descent \(隨機梯度下降法\)
-
-#### Mini-batch Gradient Descent
-
-#### Mini-batch vs Epoch
-
-#### 梯度消失問題\(Gradient Vanishing\)
-
-解決使用 SGD 造成局部最小值，而沒有找到全域最小值
-
-利用 momentun 克服梯度消失
-
-Momentun
-
-* 先算 gradient
-* 加上 monentum
-* 更新
-
-Nesterov monentum
-
-* 加上 momentum
-* 在算 gradient
-* 更新
+#### 
 
 
 
