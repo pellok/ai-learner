@@ -1,9 +1,3 @@
-# 
-
-# 
-
-# 
-
 # 卷積神經網路 Convolutional Neural Network & 電腦視覺 Computer Vision
 
 [講師投影片](https://drive.google.com/file/d/1IfQYf8W--pwqPBUdM5kByFbMrFm8rCDL/view)
