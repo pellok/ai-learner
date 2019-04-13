@@ -17,6 +17,7 @@
 * [Day10](day10.md)
 * [Day11](day11.md)
 * [Day12](day12.md)
+* [Day13](day13.md)
 
 ## Python 資料處理及探索分析
 
