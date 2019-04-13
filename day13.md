@@ -73,8 +73,6 @@ prediction
 
 可以針對沒個要辨識的圖片手動定義要特徵，但是當類別很多的時候，很難每一個都手動定義
 
-
-
 ### Conventainal approaches vs Deep learning
 
 影像特徵擷蠻困難的，
@@ -90,6 +88,37 @@ prediction
 Deep learning = Learning hierarchical representations
 
 low-level Feature -&gt; mid-level Feature -&gt; high-level Feature -&gt; Trainable Classifier
+
+
+
+### Neural Networks
+
+#### ImageNet 圖片資料集 ILSVRC 有1000個類別 1百多萬張圖片
+
+### CNN Structure
+
+Convolution Layer & Activation Layer
+
+Pooling Layer
+
+Convolution Layer & Activation Layer
+
+Pooling Layer
+
+再經過神經網路訓練
+
+
+
+### Convolution neural networks 簡稱CNN
+
+DNN在處理影像的時候會要參數過多的問題，
+
+我們使用 以下兩個方式來將降低DNN學習圖片的問題
+
+1. Local connetivity：圖片有相關聯性，藍色的pixs附近很大的機率也是藍色，所以每一個輸入只跟附近的點有關係，跟太遠的點沒有關係，所以輸入只取附近的幾個輸入就好 
+2. Weight sharing 影像不同的位置，要萃取的相同或類似的性質，所以每一個區塊都是要學習相同的參數
+3. CNN with multiple input channels 圖片有不同的channels  gray vs RGB vs RGBD
+4. CNN with multiple output channels 
 
 
 
