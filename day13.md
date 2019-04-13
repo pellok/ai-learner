@@ -73,3 +73,27 @@ prediction
 
 可以針對沒個要辨識的圖片手動定義要特徵，但是當類別很多的時候，很難每一個都手動定義
 
+
+
+### Conventainal approaches vs Deep learning
+
+影像特徵擷蠻困難的，
+
+在傳統的機器學習是經過兩階段的過程
+
+1. 人工選擇合適的影像特徵\(特徵選取\)
+
+2. 再把影像特徵輸入到分類器學習\(分類器學習\)
+
+#### 使用 Deep learning/End-to-end learning/Feature learning 後變成一個步驟，而且都是機器自己學習
+
+Deep learning = Learning hierarchical representations
+
+low-level Feature -&gt; mid-level Feature -&gt; high-level Feature -&gt; Trainable Classifier
+
+
+
+
+
+
+
