@@ -1,3 +1,9 @@
+# 
+
+# 
+
+# 
+
 # 卷積神經網路 Convolutional Neural Network & 電腦視覺 Computer Vision
 
 [講師投影片](https://drive.google.com/file/d/1IfQYf8W--pwqPBUdM5kByFbMrFm8rCDL/view)
@@ -20,10 +26,6 @@
 
 3. OpenCV
 
-
-
-
-
 CV電腦介紹，Filter\(kernel\) 功能介紹，使用Filter可以讓圖片平移、模糊或變銳利等
 
 電腦視覺的應用
@@ -40,15 +42,11 @@ CV電腦介紹，Filter\(kernel\) 功能介紹，使用Filter可以讓圖片平�
 10. CV：人臉年齡估計 face age estimation ML：CNNs for hierarchical regression
 11. CV：影像共同切割 image co-segmentation ML：Unsupervised CNNs
 
-
-
 CNN
 
 * Convolution neural networks\(CNNs\)
 * Representative CNN models
 * CNN-based computer vision applications
-
-
 
 物件辨識：給定一張影像，判斷裡面有哪一些物件
 
@@ -72,8 +70,6 @@ trained classifier
 
 prediction
 
-
-
 取影像特徵的方法：
 
 * SIFT \[Lowe, IJCV'04\] 被引用4萬多次，已一個影像點為中心，附近的項數的Graiden和強度和方向取特徵
@@ -81,13 +77,5 @@ prediction
 * Constellation model \[Fergus et al., CVPR'03\] 被引用2千多次，特徵由若干的區塊組成，以及這些part的幾何對應位置
 * DPM\[Felzenszwalb et al., PAMI'10\] 他的強項是可以用機器學習來學習特徵
 
-
-
 可以針對沒個要辨識的圖片手動定義要特徵，但是當類別很多的時候，很難每一個都手動定義
-
-
-
-
-
-
 
