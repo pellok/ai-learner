@@ -137,7 +137,7 @@ Overfitting ?
 * This is a general phenomenon, observed in many datasets
 * it is caused by gradient exploding/vanishing
 
-### Residual module
+#### Residual module
 
 Learn the residual F\(x\), instead of the desired output H\(X\)
 
@@ -148,8 +148,6 @@ Shortcuts connections
 * A practical way to go deeper
 * Inexpensive 1x1 convolutional layers for channel reduction
 
-
-
 優秀性質
 
 * Less parameters in single module
@@ -157,6 +155,55 @@ Shortcuts connections
 * Reduce the risk of vanishing gradient
 * Increase depth of the network
 * Achieve higher accuracy in many vision applications
+
+
+
+### DenseNet
+
+2017 發表，每一層的 input 會有上面所有層的 feature map 當input 
+
+Network Architecture
+
+Densely connect each layer to every other layer
+
+For a layer, feature maps of all preceding layers are its input 
+
+優點：
+
+* Alleviate vanishing gradient
+* Strengthen feature propagation
+* Encourage feature reuse
+* Reduce the number of parameters
+
+channel-wise concatenation
+
+
+
+缺點：
+
+High computation cost
+
+more parameters per filter
+
+解決上面兩個問題：
+
+* 1x1 convolutional layer for channel\(feature map\) reduction
+* Suppose each layer produces k feature maps
+* There will be 1xk channels at the 1th convolution layer
+* Reduct to 4xk channels before producing its k feature maps
+* No pooling for map size reduction?
+
+做 Batch Norm 提升捲機效能
+
+
+
+Dense block：a few densely connected convolutional layers
+
+Stack dense blocks
+
+Insert a convolutional layer and a pooling layer into two connection blocks
+
+
 
 
 
