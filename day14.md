@@ -156,17 +156,15 @@ Shortcuts connections
 * Increase depth of the network
 * Achieve higher accuracy in many vision applications
 
-
-
 ### DenseNet
 
-2017 發表，每一層的 input 會有上面所有層的 feature map 當input 
+2017 發表，每一層的 input 會有上面所有層的 feature map 當input
 
 Network Architecture
 
 Densely connect each layer to every other layer
 
-For a layer, feature maps of all preceding layers are its input 
+For a layer, feature maps of all preceding layers are its input
 
 優點：
 
@@ -176,8 +174,6 @@ For a layer, feature maps of all preceding layers are its input
 * Reduce the number of parameters
 
 channel-wise concatenation
-
-
 
 缺點：
 
@@ -195,8 +191,6 @@ more parameters per filter
 
 做 Batch Norm 提升捲機效能
 
-
-
 Dense block：a few densely connected convolutional layers
 
 Stack dense blocks
@@ -205,7 +199,9 @@ Insert a convolutional layer and a pooling layer into two connection blocks
 
 
 
+### Performance comparison
 
+2017 年發表，沒有放入 DenseNet，比較各種 CNN 的優缺點
 
 
 
