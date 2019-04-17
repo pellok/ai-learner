@@ -52,15 +52,11 @@ Five Major contributions:
 
 輸入過於簡單與資料過於複雜都會容易造成 Overfitting 問題
 
-
-
 Top1 error：一次只能猜一個答案，算錯就錯了
 
 Top5 error：一次猜五個答案，其中一個猜對就算對
 
-
-
-### VGGNet 
+### VGGNet
 
 2014 年發表
 
@@ -72,8 +68,6 @@ CNN 的層數對正確度的關係
 * Less parameters to learn
 * More numbers of channels
 * Stacked convolution layers have large receptive fields
-
-
 
 ### GoogleNet\(Inception V1\)
 
@@ -89,8 +83,6 @@ Inception module
 
 Auxiliary classifiers
 
-
-
 ### Inception module
 
 選擇 filter sizes of 1x1, 3x3 and 5x5
@@ -99,7 +91,7 @@ concatenate all feature maps
 
 concatenate one additional pooling path, which is essential to the success of CNNs
 
-觀察小區域特性和大區域特性，為了平衡大小區域特徵，所以採用 pooling 的方式做 concatenate 
+觀察小區域特性和大區域特性，為了平衡大小區域特徵，所以採用 pooling 的方式做 concatenate
 
 Linear decrease in feature maps results in quadratic decrease in computation
 
@@ -109,19 +101,19 @@ Linear decrease in feature maps results in quadratic decrease in computation
 
 Global average Pooling 取代 fully connection layers
 
-
-
 ### Auxiliary classifiers
 
 Deep networks result in vanishing gradients
 
 Auxiliary classifiers are appended
 
-Intermediate layers become discriminative 
+Intermediate layers become discriminative
 
 Intermediate losses alleviate the problem of vanishing graident
 
+在幾層Inception module 之後增加 SoftMax/Loss 加強 Inception module 的學習強度
 
+當要預測時，拿掉中間的 SoftMax/Loss 只留最後的 softmax/Loss
 
 
 
