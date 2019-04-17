@@ -117,3 +117,44 @@ Intermediate losses alleviate the problem of vanishing graident
 
 
 
+## ResNet
+
+2016 年發表 用來解決訓練網路在深成時所造成的 Gradient Exploding / Vanishing 問題，
+
+可以訓練到1000層以上
+
+
+
+The deeper, the better
+
+* Larger receptive field size
+* Higher non-linearity
+* Better fitting power
+
+Really ?
+
+Performance drops when using an overly deep CNN model
+
+Overfitting ?
+
+* No. Not only testing but also training error increase!
+* This is a general phenomenon, observed in many datasets
+* it is caused by gradient exploding/vanishing
+
+
+
+### Residual module
+
+Learn the residual F\(x\), instead of the desired output H\(X\)
+
+Residual：Difference between the input and the desired output
+
+Shortcuts connections
+
+* A practical way to go deeper
+* Inexpensive 1x1 convolutional layers for channel reduction
+
+
+
+
+
