@@ -115,15 +115,11 @@ Intermediate losses alleviate the problem of vanishing graident
 
 當要預測時，拿掉中間的 SoftMax/Loss 只留最後的 softmax/Loss
 
-
-
 ## ResNet
 
 2016 年發表 用來解決訓練網路在深成時所造成的 Gradient Exploding / Vanishing 問題，
 
 可以訓練到1000層以上
-
-
 
 The deeper, the better
 
@@ -141,8 +137,6 @@ Overfitting ?
 * This is a general phenomenon, observed in many datasets
 * it is caused by gradient exploding/vanishing
 
-
-
 ### Residual module
 
 Learn the residual F\(x\), instead of the desired output H\(X\)
@@ -153,6 +147,18 @@ Shortcuts connections
 
 * A practical way to go deeper
 * Inexpensive 1x1 convolutional layers for channel reduction
+
+
+
+優秀性質
+
+* Less parameters in single module
+* Accelerate the training of deep networks
+* Reduce the risk of vanishing gradient
+* Increase depth of the network
+* Achieve higher accuracy in many vision applications
+
+
 
 
 
