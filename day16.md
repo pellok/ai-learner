@@ -43,14 +43,10 @@ c. Semantic segmentation：偵測、切割出物件\(pixel描輪廓\)
 
 d. Instance segmentaion：偵測、物件前後景切割，並標示個別物件
 
-
-
 #### Mask-RCNN \[He et al. ICCV'17\]
 
 * Instance Segmentation
 * Two Stage Faster R-CNN + FCN
-
-
 
 理論講授 [投影片 ](https://drive.google.com/file/d/1gr_U_FlIT8cbJ35zr5Raf1tNe5x4rgkM/view)
 
@@ -58,25 +54,17 @@ d. Instance segmentaion：偵測、物件前後景切割，並標示個別物件
 
 [影片播放列表](https://www.youtube.com/playlist?list=PL1f_B9coMEeCiJeQN_w00Irur8YnNzfPX)
 
-
-
 ### YOLO\(You only look once\)
 
 * A bref introduction of one-stage detecto
-
-
 
 什麼是 Two-stage detector?
 
 將 object detection 分為兩步驟：localization & classification
 
-
-
 什麼是 One-stage detector?
 
 end to end training 一次搞定所有任務
-
-
 
 We frame object detection as a regression problem to spatially separated bounding boxes and associated class probabilities.
 
@@ -84,9 +72,7 @@ We frame object detection as a regression problem to spatially separated boundin
 2. runs a single convolutional network on the image 
 3. thresholds the resulting detections by the model's confidence
 
-
-
-#### Loss Function 
+#### Loss Function
 
 一個"loss"的架構以及問題
 
@@ -104,19 +90,17 @@ We frame object detection as a regression problem to spatially separated boundin
 * 同一類 object 新的長寬比例效果不好
 * 小 object 的 localization error\(小的物件定位效果不好\)
 
-
-
 ### [YOLO9000 Better, Faster, Stronger](https://pjreddie.com/darknet/yolo/)
 
+#### [YOLO9000: Better, Faster, Stronger论文笔记](https://www.jianshu.com/p/2d88bdd89ba0)
 
 
 
+Why does 1 x 1 conv help?
 
 
 
-YOLOv2
-
-
+AP explaination
 
 
 
