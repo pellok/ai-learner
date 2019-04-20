@@ -6,8 +6,6 @@
 
 [影片播放列表](https://www.youtube.com/playlist?list=PL1f_B9coMEeDtGJ00o8v9Qg7z0meYcdhB)
 
-
-
 # semantic segmentation 語意分割、語太分割
 
 Goal：Label each pixel to one of the predefined classes or background
@@ -16,15 +14,11 @@ Goal：Label each pixel to one of the predefined classes or background
 
 Critical to hight-level vision tasks such as scene understanding robot navigation, and image retrieval
 
-
-
 Fully Convolutional Network for Semantic Segmentation\(FCN\) \[Long et al., CVPR'15\]
 
 Fully convolutional network：移除Full connection layer
 
 為什麼要移除Full connection layer？，因為經過全連接層無法保留位置資訊
-
-
 
 ### FCN 網路結構
 
@@ -33,15 +27,11 @@ Fully convolutional network：移除Full connection layer
 * Convert all fully connected layers to convolutions
 * Append a 1 x 1 convolution with channel dimension 21 to predict scores for each of the PASCAL classes.
 
+#### Deconvolution
 
+如果有沒使用 deconvolution 結果會很差，因為解析度下降太多，要從解析度低的還原到解析度高的地方，基本上是辦不到的，這邊使用前一層的資訊拿到做處理，這樣就可以還原比較清楚．
 
-
-
-
-
-
-
-
+####  
 
 
 
