@@ -60,16 +60,12 @@ Co-occurrence Layer貢獻層
 
 CUB-200-2011 資料集
 
-
-
 ## Object detection 物件偵測
 
 目的：
 
 1. Recognition\(What?\)識別
 2. Localization\(Where?\) 位置，使用定界框，框出物件
-
-
 
 #### R-CNN Regions with CNN Features
 
@@ -89,23 +85,19 @@ Regression-base bounding box refinement 找出定界匡之後，但是不是那�
 
 PASCAL VOC 比賽 ， mAP\(%\)物件偵測率，在2015 年 使用 CNN 來做物件偵測有大幅度進步
 
-
-
 #### Fast R-CNN 優化 R-CNN
 
 在 R-CNN 使用 Selective search 找出 2000 個左右的 Bounding box ，已pixel 來看，同時屬於3、4百個Bounding box，每一個bounding box 又丟掉 CNN裡面做分類問題，這是高度重複的運算，如果可以解決高度重複問題，就可以加速Object detetion 問題，使用內插法
 
 Apply fully convolutional network to the whole image
 
-ROI pooling：each proposal is pooled into a fix-size feature map 
+ROI pooling：each proposal is pooled into a fix-size feature map
 
 Classification with a softmax layer
 
 Regression-based bounding box refinement
 
 在訓練上面加速了8倍，加快了圖片偵測速度到0.32秒
-
-
 
 #### Faster R-CNN \[Ren et al., NIPS'15\]
 
@@ -122,9 +114,35 @@ GPU acceleration is allowed
 
 
 
+R-CNN 提高物件偵測正確率
+
+Fast R-CNN 加速 25倍
+
+Faster R-CNN 加速 250 倍
 
 
 
+#### YOLO900 可以偵測各種不同的類型物件
+
+
+
+[RCNN](https://github.com/rbgirshick/rcnn)
+
+[Fast-RCNN](https://github.com/rbgirshick/fast-rcnn)
+
+[Faster-RCNN](https://github.com/rbgirshick/py-faster-rcnn)
+
+[Mask RCNN](https://forums.fast.ai/t/implementing-mask-r-cnn/2234)
+
+
+
+#### [Tensorflow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection)
+
+包含多數主流模型，而且都已經訓練完畢
+
+* Faster R-CNN with ResNet 50
+* SSD with mobileNet
+* Mask R-CNN
 
 
 
