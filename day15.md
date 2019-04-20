@@ -112,19 +112,13 @@ Region proposal network\(RPN\) 有效降低 proposals 數量
 
 GPU acceleration is allowed
 
-
-
 R-CNN 提高物件偵測正確率
 
 Fast R-CNN 加速 25倍
 
 Faster R-CNN 加速 250 倍
 
-
-
 #### YOLO900 可以偵測各種不同的類型物件
-
-
 
 [RCNN](https://github.com/rbgirshick/rcnn)
 
@@ -134,8 +128,6 @@ Faster R-CNN 加速 250 倍
 
 [Mask RCNN](https://forums.fast.ai/t/implementing-mask-r-cnn/2234)
 
-
-
 #### [Tensorflow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection)
 
 包含多數主流模型，而且都已經訓練完畢
@@ -143,8 +135,6 @@ Faster R-CNN 加速 250 倍
 * Faster R-CNN with ResNet 50
 * SSD with mobileNet
 * Mask R-CNN
-
-
 
 
 
