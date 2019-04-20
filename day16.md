@@ -8,5 +8,40 @@
 
 
 
+# semantic segmentation 語意分割、語太分割
+
+Goal：Label each pixel to one of the predefined classes or background
+
+在給定一些物件類別，假如說給一些類別，給一張圖片，標出類別或什麼都不是
+
+Critical to hight-level vision tasks such as scene understanding robot navigation, and image retrieval
+
+
+
+Fully Convolutional Network for Semantic Segmentation\(FCN\) \[Long et al., CVPR'15\]
+
+Fully convolutional network：移除Full connection layer
+
+為什麼要移除Full connection layer？，因為經過全連接層無法保留位置資訊
+
+
+
+### FCN 網路結構
+
+* Use AlexNet, VGG 16-layer net, or GoogleNet
+* Discarding the final classifier layer
+* Convert all fully connected layers to convolutions
+* Append a 1 x 1 convolution with channel dimension 21 to predict scores for each of the PASCAL classes.
+
+
+
+
+
+
+
+
+
+
+
 
 
