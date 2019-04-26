@@ -4,6 +4,8 @@
 
 [理論講授 影片播放列表 \(YouTube\)](https://www.youtube.com/playlist?list=PL1f_B9coMEeB4GBkfyB_0xzbYAVcb6gOt)
 
+[影片播放 下午 播放列表\(YouTube\)](#)
+
 [今日課程 投影片下載 \(PDF\)](https://drive.google.com/file/d/1SwRHsUjOHpYBOgWOmWscqy92tKzXjjyq/view)
 
 ## 主要課程
@@ -22,7 +24,7 @@
 
 4. Self-taught learning
 
-### 什麼是 Transfer Learning ?
+### 什麼是 Transfer Learning ? 借用經驗
 
 假如你現在手上有一些根你要訓練的沒有相關的Data ，
 
@@ -37,6 +39,10 @@ exp:
 Transfer Learning 有很多的方法
 
 #### Model Fine-tuning
+
+複製模型的參數當作初始參數，再用自己的訓練資料進行微調
+
+\(借用的參數會被改變\)
 
 任務描述：
 
@@ -54,11 +60,15 @@ Idea：training a model by source data, then fine-tune the model by target data
 
 * Challenge：only limited target data, so be careful about overfitting
 
+#### 
+
 #### Conservative Training
 
 #### 
 
 #### Layer Transfer
+
+只借用模型的部分神經曾參數，並在訓練的過程中凍結改層參數
 
 現在有用 Source Data 訓練好的一個 model ，你把 model 裡面某幾個 layer 拿出來，
 
@@ -72,9 +82,38 @@ Idea：training a model by source data, then fine-tune the model by target data
 3. Which layer can be transferred\(copied\)?
 
 4. Speech：usually copy the last few layers
+
 5. Image：usually copy the first few layers
 
-#### Layer Transfer - Image
+注意：使用pre-trained model 時，記得模型架構、資料輸入大小，都要跟對方的一樣喔
+
+
+
+### Multitask Learning
+
+在 Fine-tuning 裡面我們 care task domain 做的好不好
+
+在 multitask 裡面我們 care source and task 同時把它做好
+
+怎麼做呢？
+
+The multi-layer structure maks NN suitable for multitask learning
+
+資料有共通性，前面幾個 layer 是共用的
+
+資料沒有共通性，只有中間幾個layer共用
+
+Multitask Learning 很適合用在多語言的語音辨識，前面共用\(人類說\)後面分開不同語言
+
+例如 中翻英、中翻日、中翻韓，輸入都是中文，所以前面幾層共用
+
+
+
+
+
+
+
+
 
 
 
