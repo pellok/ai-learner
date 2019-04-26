@@ -117,13 +117,7 @@ Multitask Learning 很適合用在多語言的語音辨識，前面共用\(人�
 
 例如 中翻英、中翻日、中翻韓，輸入都是中文，所以前面幾層共用
 
-
-
 #### Progressive Neural Networks
-
-
-
-
 
 ## Domain-adversarial training
 
@@ -131,7 +125,7 @@ Source Data -&gt; Label  -&gt; Training data
 
 Target Data -&gt; Unlabeled  -&gt; Testing data
 
-Training data and Testing data  is mismatch 
+Training data and Testing data  is mismatch
 
 這邊希望做到的事情是，前面的 Feature extractor 他可以把 domain 的特性去除掉，
 
@@ -151,19 +145,15 @@ Feature extractor 想在做的是improve label predictor，同時想要 minimize
 
 陷害隊友的分法就是在 feature extractor 和 domain classifier 之間 增加 gradient reversal layer
 
+Domain classifier 一定要奮力掙扎，把 Feature extractor 逼到極限，把 domain feature 移掉
 
 
 
+## Zero-shot Learning
 
+Source Data -&gt; Label  -&gt; Training data
 
-
-
-
-
-
-
-
-
+Target Data -&gt; Unlabeled  -&gt; Testing data
 
 
 
