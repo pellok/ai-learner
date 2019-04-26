@@ -147,13 +147,57 @@ Feature extractor 想在做的是improve label predictor，同時想要 minimize
 
 Domain classifier 一定要奮力掙扎，把 Feature extractor 逼到極限，把 domain feature 移掉
 
-
-
 ## Zero-shot Learning
 
 Source Data -&gt; Label  -&gt; Training data
 
 Target Data -&gt; Unlabeled  -&gt; Testing data
+
+Training data and Testing data  is different tasks
+
+判斷cat and dog 和 判斷 馬和草泥馬
+
+
+
+In speech recofnition, we can not have all possible words in the source \(training\) data.
+
+在語音上很常遇到 Zero-shot 問題，語音行常遇到沒有看過的
+
+我們怎麼解決這個問題呢？ 
+
+不要直接去辨識屬於哪一個字，我們直接去辨識的是一對聲音屬於哪一個目標\(forni\)就好
+
+我們辨識的單位不要定義成word，定義成 forni 就好，
+
+然後我們在做一個 forni 和 word的對應的關係表，我們就稱為 dictionary 字典，
+
+在辨識的時候只要辨識出 forni 再去查表，forni 對應到哪一個 word
+
+
+
+在影像上怎麼做？
+
+辨識圖片有哪一些屬性，依據每一個動物去學習動物的屬性
+
+當遇到沒看過的動物的時候，可以判斷出基本屬性
+
+
+
+#### Attribute embedding + word embedding
+
+Embedding Space 
+
+
+
+#### Zero-shot Learning Loss Function
+
+
+
+
+
+
+
+
 
 
 
