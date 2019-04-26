@@ -189,3 +189,13 @@ Embedding Space
 
 
 
+## Self-taught learning
+
+Source Data -&gt; Unlabeled  -&gt; Training data
+
+Target Data -&gt; labeled  -&gt; Testing data
+
+
+
+
+
