@@ -40,6 +40,10 @@ Transfer Learning 有很多的方法
 
 #### Model Fine-tuning
 
+Source Data -&gt; Label
+
+Target Data -&gt; Label
+
 複製模型的參數當作初始參數，再用自己的訓練資料進行微調
 
 \(借用的參數會被改變\)
@@ -68,6 +72,10 @@ Idea：training a model by source data, then fine-tune the model by target data
 
 #### Layer Transfer
 
+Source Data -&gt; Label
+
+Target Data -&gt; Label
+
 只借用模型的部分神經曾參數，並在訓練的過程中凍結改層參數
 
 現在有用 Source Data 訓練好的一個 model ，你把 model 裡面某幾個 layer 拿出來，
@@ -87,9 +95,11 @@ Idea：training a model by source data, then fine-tune the model by target data
 
 注意：使用pre-trained model 時，記得模型架構、資料輸入大小，都要跟對方的一樣喔
 
-
-
 ### Multitask Learning
+
+Source Data -&gt; Label
+
+Target Data -&gt; Label
 
 在 Fine-tuning 裡面我們 care task domain 做的好不好
 
@@ -106,6 +116,44 @@ The multi-layer structure maks NN suitable for multitask learning
 Multitask Learning 很適合用在多語言的語音辨識，前面共用\(人類說\)後面分開不同語言
 
 例如 中翻英、中翻日、中翻韓，輸入都是中文，所以前面幾層共用
+
+
+
+#### Progressive Neural Networks
+
+
+
+
+
+## Domain-adversarial training
+
+Source Data -&gt; Label  -&gt; Training data
+
+Target Data -&gt; Unlabeled  -&gt; Testing data
+
+Training data and Testing data  is mismatch 
+
+這邊希望做到的事情是，前面的 Feature extractor 他可以把 domain 的特性去除掉，
+
+這招叫Domain adversarial ，
+
+增加一個 Domain classifier
+
+像是 GAN ，Too easy to feature extractor
+
+Feature extractor 要騙過 Domain classifier 和滿足 Label predictor
+
+Lable predictor 想要做的是分類的正確率越高越好 Maximize label classification accuracy
+
+Domain classifier 想要做的是正確的預測domain的分類 Maximize domain classification accuracy
+
+Feature extractor 想在做的是improve label predictor，同時想要 minimize domain classification accuracy
+
+陷害隊友的分法就是在 feature extractor 和 domain classifier 之間 增加 gradient reversal layer
+
+
+
+
 
 
 
