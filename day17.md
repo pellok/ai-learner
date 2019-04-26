@@ -54,13 +54,11 @@ Idea：training a model by source data, then fine-tune the model by target data
 
 * Challenge：only limited target data, so be careful about overfitting
 
-
-
 #### Conservative Training
 
 #### 
 
-#### Layer Transfer 
+#### Layer Transfer
 
 現在有用 Source Data 訓練好的一個 model ，你把 model 裡面某幾個 layer 拿出來，
 
@@ -71,13 +69,14 @@ Idea：training a model by source data, then fine-tune the model by target data
 1. Only train the rest layers \(prevent overfitting\)
 2. Fine-tune the whole network \(if there is sufficient data\)
 
-* Which layer can be transferred\(copied\)?
-* Speech：usually copy the last few layers
-* Image：usually copy the first few layers
+3. Which layer can be transferred\(copied\)?
+
+4. Speech：usually copy the last few layers
+5. Image：usually copy the first few layers
+
+#### Layer Transfer - Image
 
 
-
-Layer Transfer
 
 
 
