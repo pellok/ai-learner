@@ -1,12 +1,6 @@
 # 遷移學習\(Transfer Learning\)
 
-[理論講授投影片下載 \(PDF\)](https://drive.google.com/file/d/1iQHZH5U_cTuwTDvxOec_DgDYmdtCK7Bo/view)
-
-[理論講授 影片播放列表 \(YouTube\)](https://www.youtube.com/playlist?list=PL1f_B9coMEeB4GBkfyB_0xzbYAVcb6gOt)
-
-[影片播放 下午 播放列表\(YouTube\)](#)
-
-[今日課程 投影片下載 \(PDF\)](https://drive.google.com/file/d/1SwRHsUjOHpYBOgWOmWscqy92tKzXjjyq/view)
+c
 
 ## 主要課程
 
@@ -185,17 +179,9 @@ Embedding Space
 
 #### Convex Combination of Semantic Embedding
 
-
-
-
-
 ## Self-taught learning
 
 Source Data -&gt; Unlabeled  -&gt; Training data
 
 Target Data -&gt; labeled  -&gt; Testing data
-
-
-
-
 
