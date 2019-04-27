@@ -70,13 +70,9 @@ exp：我們想股市明天的收盤價，也會需要前幾天的資料
 
 最常見的大概是讓電腦說影片中發生什麼事
 
-
-
 #### RNN Cell 的運作方式
 
 Weight + 前一層輸出\(h\) 當作輸入
-
-
 
 #### RNN 的應用類型
 
@@ -84,17 +80,61 @@ Weight + 前一層輸出\(h\) 當作輸入
 * Many-to-One 情意分析
 * Many-to-Many 對話機器人、Slot Filling
 
-
-
 #### Bidirectional\(雙向型\) RNN
 
 RNN有一個不公平的地方，就是看到第一個次就要做預測，尤其是 Many-to-Many尤其困難，
 
 我們要讓他公平一點，正向做一次，反向也做一次
 
-
-
 #### 比玩具還玩具的例子
+
+
+
+#### Backpropagation Through Time BPTT
+
+注意不同時間點 Weights 是一樣的
+
+Backpropagation 方向：把每個時間點的 Weights 當不同參數微分
+
+RNN 很像『深度』神經網路，所以也是有 Vanishing Gradient 的問題
+
+有兩個改良的方式：LSTM、GRU
+
+
+
+#### Long Short Term Memory \(LSTM\) , RNN 系的王牌救援
+
+解決上面的問題\(Vanishing Gradient\)，
+
+多一個『Cell狀態』 cell status，專門為這一個 Cell，留給自己
+
+重要的概念：Gate 控制閥\(1：最大, 0：關閉\)，使用 Sigmoid 輸出0~1
+
+LSTM 有三個控制閥\(Gate\)：忘記門\(F\)、輸入門\(I\)、輸出門\(O\)
+
+複習 hant、sigmoid
+
+tanh = 1- e power of -x / 1+ e power of -x 產生 -1 ~ 1的數
+
+sigmoid = 1/ 1+ e power of -x 產生 0~ 1的數
+
+Ctk = Ftk \* Ct-1k + Itk \* ~Ctk
+
+Htk = Otk \* tanh\(Ctk\)
+
+
+
+#### Gated Recurrent Unit \(GRU\) ,LSTM 的簡化版
+
+只留兩個控制閥：記憶門\(z\)、重設門\(r\)
+
+Htk = Ztk \* ht-1k + \(1- Ztk\) \* ~Htk
+
+
+
+原始的RNN 我們習慣叫它 Vanilla RNN，在 Keras 中是 SimpleRNN
+
+
 
 
 
