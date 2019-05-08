@@ -170,8 +170,6 @@ Test['cat'+'_avg'] = test['cat'+'_avg'].map(averages)
 * sklearn, tree.apply\(\)
 * Xgboost API 使用 xgb.predict\(pred\_leaf=True\)
 
-
-
 ## 4.特徵選擇
 
 #### 4-1 特徵組合
@@ -180,16 +178,12 @@ Test['cat'+'_avg'] = test['cat'+'_avg'].map(averages)
 * 問題是有沒有必要？Ans：依照領域知識與資料性質而定
 * 兩個或多個數值特徵組合
 
-
-
 #### 領域知識，例如計程車費率預測：
 
 * 其中與答案相關度高的四個資料欄位：上車/下車 的 經度 / 緯度
 * 很明顯：將經緯度當作平面座標，起終點的平面距離
 * 經緯度不同長的知識
 * 上面兩個都是領域知識，特徵組合的必要性與領域知識相關
-
-
 
 #### 群聚編碼\(Group By Encoder\)
 
@@ -203,15 +197,11 @@ Test['cat'+'_avg'] = test['cat'+'_avg'].map(averages)
 
 * 特徵組合式增加特徵，而特徵篩選是減少特徵，兩者合作可以增加精準度並降低細算時間，不相衝突
 
-
-
 特徵篩選有三大類方法：
 
 * 過濾法\(Filter\)：決定評估方式，並刪除低於門檻的特徵
 * 包裝法\(Wrapper\)：根據一定法則，逐步加入特徵或逐步刪除特徵\(例如：RFE\)
 * 嵌入法\(Embedded\)：根據機器學學習型運算結果，決定刪除的特徵
-
-
 
 常用的做法：
 
@@ -219,22 +209,16 @@ Test['cat'+'_avg'] = test['cat'+'_avg'].map(averages)
 * L1\(Lasso\)嵌入法
 * 梯度提升機\(Gradient Boost Machine\)嵌入法
 
-
-
 相關係數過濾法：
 
 * 將相關係數取絕對值較小的特徵刪除
 * EDA，繪製相關係數熱圖，有助於暸解特徵與特徵間相關性之外，也可以獲得個別特徵的重要度
 * 相關係數過濾法計算快，但準確度有限\(容易受共線性影響\)
 
-
-
 L1\(Lasso\)嵌入法：
 
 * 由於 Lasso 擬合\(fit\)後，大部分的係數會為0\(python 會顯示很小的值\)，所以特徵塞選就是刪除係數為0/很小的特徵
 * 計算時間與效果都屬於中等\(能排除共線性\)，但能需調整參數，且效果未如下一個提到的梯度提升機好
-
-
 
 梯度提升機\(Gradient Boost Machine\)嵌入法：
 
@@ -250,15 +234,61 @@ L1\(Lasso\)嵌入法：
 
 特徵太多先用L1篩選掉一些之後使用梯度提升機挑選重要性
 
-
-
 ## 模型驗證
 
+訓練集\(train set\) / 測試集\(test set\) 的分割
+
+* 絕對不可以重複
+* 不可有統計特徵洩漏
+
+三種分割方式
+
+* 切分\(Hold-Out\)
+* K折交叉驗證\(K-Fold cross validation\) sklearn.model\_selection.KFold，資料量大於5000的非深度學習
+* 留一交叉驗證\(Leave One Out cross validation, LOO\)，資料級少，小於千筆
+* 時序移動視窗驗證\(Time Series Moving Window Validation\) 
+* 真實資料 &gt; Test Set &gt; Validation set &gt; Train Set
 
 
 
+Kaggle 上的分割策略\(Split Strategy\)
+
+一般來說，自己跑參的 cross-validation 分數 \(Local CV\) 提升，公開排行榜上 的分數 \(Public LB\) 也應該隨之提升
+
+萬一 Local CV 與 Public LB 差異很大，原因可能是 : 
+
+* 數據太少
+* 是否 Overfitting
+* Splitting 策略出錯 : 按照分布抽樣
+* Train/Test 分佈不同 : 無解
+
+用 RandomSearchCV 取代 GridSearchCV
+
+* 珍惜時光
+* 集成困難
+* 不會陷在局部最佳解
+
+良心建議：除了跑 RandomSearchCV / GridSearchCV外，特徵工程往往是關鍵，盡量嘗試多試試新特徵
 
 ## 集成
+
+#### Blending
+
+* Blending 是將原理差距很大的模型輸出，加權後形成新的輸出，結果常常有可能高於混合前的分數
+* 迴歸型競賽：Blending 往往很有效
+* 分類型競賽組合的前提：Metric 是否是 Convex
+* Thumb of Rule：Tree / Non-Tree / NN
+* Kindly remind：競賽人數高過三千，通常是組合競賽
+* 將單一模型的預測結果，當作混合的初始值，是在predict層級混合的方法
+
+#### Stacking 
+
+* 將單一模型的預測結果，當作下一層的新特徵，是在fit層級混合的方法
+* 因為是在fit層混合，每一步驟都需要考慮 Train 與 Validation 不可重複的問題，比較複雜
+
+
+
+
 
 
 
