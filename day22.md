@@ -4,20 +4,14 @@
 
 [資料與投影片](https://drive.google.com/file/d/1g_E98S0u-gB6iCG7NZLKPooVlDoMKX1k/view)
 
-
-
 ## 1.Introduction of GAN
 
 * GAN原理理論說明
 * Vanilla GAN 程式實作
 
-
-
 [演講影片](https://www.youtube.com/watch?v=oE6Xe5Cyy7Y)
 
 [gan-zoo](https://github.com/hindupuravinash/the-gan-zoo)
-
-
 
 ## Generation by GAN
 
@@ -27,13 +21,9 @@
 
 輸入vector -&gt; Generator -&gt; 輸出Image\(High demensional vector\)
 
-
-
 #### Discriminator：it is a neural network , or a function
 
 輸入 Image -&gt; Discriminator -&gt; scalar\(判斷圖片像不像\)
-
-
 
 #### Algorithm
 
@@ -42,11 +32,9 @@
 
 Step 1：Fix generator G and update discriminator D
 
-Step 2：Fix discriminator D and update generator G 
+Step 2：Fix discriminator D and update generator G
 
 Step 3：交替使用 Step1 and Step2 重複很多次，越多次越好
-
-
 
 \(Variational\) Auto-encoder
 
@@ -62,7 +50,7 @@ G\* = argminDiv\(Pg, Pdata\), Divergence between distributions Pg and Pdata
 
 How to compute the divergence?透過 Discriminator 來衡量
 
-Example Objective Function for D
+#### Example Objective Function for D
 
 V\(G,D\) = Ex~Pdata\[logD\(x\)\] + Ex~Pg\[log\(1-D\(x\)\)\], \(G is fixed\)
 
@@ -70,7 +58,37 @@ Training D\* = argmaxV\(D,G\)
 
 
 
+Can we use other divrgence? \[Sebastian Nowozin, et al., NIPS,2016\]
 
+
+
+### Issues and Possible Solutions
+
+* JS divergence is not suitable
+* 
+### Wasserstein distance
+
+WGAN 
+
+V\(G,D\) = max {Ex ~ Pdata\[D\(x\)\] - Ex ~Pg\[D\(x\)\]}
+
+
+
+#### Tip：Improve Quality during Testing
+
+1.Image Normal Distribution 縮少  &gt; Smaller Variance
+
+2.Mode Collapse 開始產生一樣的資料
+
+3.Mode Dropping
+
+#### Tip：Ensemble
+
+
+
+#### Objective Evaluation 衡量GAN效能的方法
+
+#### Inception Score \[Tim Salimans, et al., NIPS 2016\]
 
 
 
@@ -78,23 +96,7 @@ Training D\* = argmaxV\(D,G\)
 
 Conditional Generation
 
-
-
-
-
 Unsupervised Conditional Generation
 
-
-
-
-
 Relation to Reinforcement Learning
-
-
-
-
-
-
-
-
 
