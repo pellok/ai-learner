@@ -56,23 +56,16 @@ V\(G,D\) = Ex~Pdata\[logD\(x\)\] + Ex~Pg\[log\(1-D\(x\)\)\], \(G is fixed\)
 
 Training D\* = argmaxV\(D,G\)
 
-
-
 Can we use other divrgence? \[Sebastian Nowozin, et al., NIPS,2016\]
-
-
 
 ### Issues and Possible Solutions
 
 * JS divergence is not suitable
-* 
-### Wasserstein distance
+* ### Wasserstein distance
 
-WGAN 
+WGAN
 
 V\(G,D\) = max {Ex ~ Pdata\[D\(x\)\] - Ex ~Pg\[D\(x\)\]}
-
-
 
 #### Tip：Improve Quality during Testing
 
@@ -84,17 +77,27 @@ V\(G,D\) = max {Ex ~ Pdata\[D\(x\)\] - Ex ~Pg\[D\(x\)\]}
 
 #### Tip：Ensemble
 
-
-
 #### Objective Evaluation 衡量GAN效能的方法
 
 #### Inception Score \[Tim Salimans, et al., NIPS 2016\]
 
 
 
+## Vanila GAN
+
+生成手寫辨識
 
 
-Conditional Generation
+
+## Conditional Generation
+
+控制輸出
+
+#### Text - to - Image
+
+* Traditional supervised approach
+* 
+
 
 Unsupervised Conditional Generation
 
