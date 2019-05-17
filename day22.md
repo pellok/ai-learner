@@ -81,13 +81,9 @@ V\(G,D\) = max {Ex ~ Pdata\[D\(x\)\] - Ex ~Pg\[D\(x\)\]}
 
 #### Inception Score \[Tim Salimans, et al., NIPS 2016\]
 
-
-
 ## Vanila GAN
 
 生成手寫辨識
-
-
 
 ## Conditional Generation
 
@@ -96,10 +92,54 @@ V\(G,D\) = max {Ex ~ Pdata\[D\(x\)\] - Ex ~Pg\[D\(x\)\]}
 #### Text - to - Image
 
 * Traditional supervised approach
-* 
 
 
-Unsupervised Conditional Generation
+
+Conditional GAN - Discriminator
+
+
+
+Image - to - Image ：Image translation or pix2pix
+
+GAN + L1
+
+
+
+Conditional GAN - Video Generation
+
+
+
+Sound - to - Image
+
+需要聲音和圖片的對應關係，網路上有很多影片\(聲音+圖片\)
+
+
+
+Conditional GAN - Image - to -label
+
+Multi-label Image Classifier = Conditional Generator
+
+
+
+Conditional GAN - Speech Recognition
+
+
+
+Domain Adversarial Training
+
+
+
+
+
+
+
+## Unsupervised Conditional Generation
+
+
+
+
+
+
 
 Relation to Reinforcement Learning
 
