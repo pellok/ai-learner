@@ -117,5 +117,39 @@ Domain Adversarial Training
 
 ## Unsupervised Conditional Generation
 
-Relation to Reinforcement Learning
+最常用的是 Image style transfer
+
+Disco GAN
+
+Dual GAN
+
+Cycle GAN
+
+
+
+Projection to Common Space
+
+Cycle Consistency
+
+Semantic Consistency
+
+
+
+Speech Style Transfer聲音轉換
+
+
+
+Wasserstein GAN\(WGAN\) Earth Mover's Distance
+
+
+
+## Relation to Reinforcement Learning
+
+
+
+
+
+
+
+
 
