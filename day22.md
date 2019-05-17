@@ -87,59 +87,35 @@ V\(G,D\) = max {Ex ~ Pdata\[D\(x\)\] - Ex ~Pg\[D\(x\)\]}
 
 ## Conditional Generation
 
+[投影片](https://drive.google.com/file/d/1P5mWI9gTPFfGqmtjgIrOJp_fggMgXptn/view)
+
 控制輸出
 
 #### Text - to - Image
 
 * Traditional supervised approach
 
-
-
 Conditional GAN - Discriminator
-
-
 
 Image - to - Image ：Image translation or pix2pix
 
 GAN + L1
 
-
-
 Conditional GAN - Video Generation
-
-
 
 Sound - to - Image
 
 需要聲音和圖片的對應關係，網路上有很多影片\(聲音+圖片\)
 
-
-
 Conditional GAN - Image - to -label
 
 Multi-label Image Classifier = Conditional Generator
 
-
-
 Conditional GAN - Speech Recognition
-
-
 
 Domain Adversarial Training
 
-
-
-
-
-
-
 ## Unsupervised Conditional Generation
-
-
-
-
-
-
 
 Relation to Reinforcement Learning
 
