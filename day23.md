@@ -6,13 +6,9 @@
 
 [播放清單](https://www.youtube.com/playlist?list=PL1f_B9coMEeCpkBHXNJBPoVY5LcbDMHvk)
 
+## NLP Basic
 
-
-##  NLP Basic
-
-Meaning Representation 
-
-
+Meaning Representation
 
 #### Knowledge-Based Representation 辭典或導師告訴你字的意思或你去查字典
 
@@ -38,8 +34,6 @@ Idea: words with similar meanings often have similar neighbors 如果兩個字�
 * Co-occurrence matrix constructed via neightbors
 * Neighbor definition: full document vs windows
 
-
-
 Full document:
 
 word-document co-occurrence matrix gives general topics -&gt; "Latent Sematic Analysis"
@@ -47,8 +41,6 @@ word-document co-occurrence matrix gives general topics -&gt; "Latent Sematic An
 Windows:
 
 context window for each word -&gt; capture syntactic \(e.g. POS\) and sematic information
-
-
 
 #### Window-Base Co-occurrence Matrix
 
@@ -65,8 +57,6 @@ Issues:
 * sparsity -&gt; poor robustness
 
 Idea: low dimensional word vector
-
-
 
 #### Low-Dimensional Dense Word Vector
 
@@ -85,19 +75,23 @@ Issue：
 
 Idea: directly learn low-dimensional word vectors 直接在空間上是哪一個位置
 
-
-
 Method2：directly learn low-dimensional word vectors
 
-Recent and most popular models: word2vec\(Mikolov et al. 2013\) and Glove\(Pennington et al., 2014\) and As known as "Word Embeddings"
+Recent and most popular models: word2vec\(Mikolov et al. 2013\) and Glove\(Pennington et al., 2014\)  As known as "Word Embeddings"
+
+
+
+1. 文字探勘
+
+2. 文字探勘 - 實作
+
+3. 文字特徵工程
+
+
+
+## Word Embeddings Word2Vec
 
 
 
 
-
-2. 文字探勘
-
-3. 文字探勘 - 實作 
-
-4. 文字特徵工程
 
