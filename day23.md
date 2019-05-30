@@ -79,19 +79,13 @@ Method2：directly learn low-dimensional word vectors
 
 Recent and most popular models: word2vec\(Mikolov et al. 2013\) and Glove\(Pennington et al., 2014\)  As known as "Word Embeddings"
 
-
-
 1. 文字探勘
 
 2. 文字探勘 - 實作
 
 3. 文字特徵工程
 
-
-
-## Word Embeddings Word2Vec
-
-
+## 
 
 
 
